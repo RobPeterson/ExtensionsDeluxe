@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsDeluxe", "ExtensionsDeluxe\ExtensionsDeluxe.csproj", "{FC01F374-D3C8-4DD3-AA11-75D3756AC60C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringExtensions", "StringExtension\StringExtensions.csproj", "{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC01F374-D3C8-4DD3-AA11-75D3756AC60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC01F374-D3C8-4DD3-AA11-75D3756AC60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC01F374-D3C8-4DD3-AA11-75D3756AC60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC01F374-D3C8-4DD3-AA11-75D3756AC60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
