@@ -1,0 +1,4 @@
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb

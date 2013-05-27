@@ -2,6 +2,11 @@
  * It make lead go unnecessary code bloat.
  * Some ideas:
  *  StringFormatting
+ *  Randomize
+ *  Cryptographic Shuffle.
+ *  Encrypt
+ *  Reverse
+ *  ToMorseCodeTones i.e make sounds.
  *  String Analysts, SoundEx, Levenstein,
  *  Tweet
  *  FBPost
@@ -10,18 +15,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StringExtensions
 {
-    public class StringModifyingExtensions
+    public static class StringModifyingExtensions
     {
         /// <summary>
         /// Remove any characters that are not digits.
         /// </summary>
         /// <param name="myString"></param>
-        public void RemoveNonDigits(this string myString)
+        public static void RemoveNonDigits(this string myString)
         {
             if (myString == null) return;
             StringBuilder sb = new StringBuilder();
@@ -37,7 +43,7 @@ namespace StringExtensions
         /// Remove any characters that are not letters in the alphabet.
         /// </summary>
         /// <param name="myString"></param>
-        public void RemoveNonAlpha(this string myString)
+        public static void RemoveNonAlpha(this string myString)
         {
             if (myString == null) return;
             StringBuilder sb = new StringBuilder();
@@ -53,7 +59,7 @@ namespace StringExtensions
         /// Remove any characters that are punctuation.
         /// </summary>
         /// <param name="myString"></param>
-        public void RemovePunctuation(this string myString)
+        public static void RemovePunctuation(this string myString)
         {
             if (myString == null) return;
             StringBuilder sb = new StringBuilder();
@@ -69,7 +75,7 @@ namespace StringExtensions
         /// Remove any white space characters.
         /// </summary>
         /// <param name="myString"></param>
-        public void RemoveWhiteSpace(this string myString)
+        public static void RemoveWhiteSpace(this string myString)
         {
             if (myString == null) return;
             StringBuilder sb = new StringBuilder();
@@ -78,7 +84,27 @@ namespace StringExtensions
                 if (!Char.IsWhiteSpace(c))
                     sb.Append(c);
             }
+            myString = sb.ToString();
         }
+
+        /// <summary>
+        /// This will perform a non-cryptographic shuffle of the string contents.
+        /// </summary>
+        /// <param name="myString"></param>
+        public static void Shuffle(this string myString)
+        {
+            if (myString == null) return;
+            StringBuilder sb = new StringBuilder();
+            Random randomizer = new Random();
+            while (myString.Length > 0)
+            {
+                int index = randomizer.Next(myString.Length);
+                sb.Append(myString[index]);
+                myString.Remove(index, 1);
+            }
+            myString = sb.ToString();
+        }
+
 
 
     }

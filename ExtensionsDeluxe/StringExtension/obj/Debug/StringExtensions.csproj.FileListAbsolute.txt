@@ -1,0 +1,4 @@
+D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb

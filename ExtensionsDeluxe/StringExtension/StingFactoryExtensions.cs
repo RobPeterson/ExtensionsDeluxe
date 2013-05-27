@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StringExtension
 {
-    public class StingFactoryExtensions
+    public static class StingFactoryExtensions
     {
-        public string ToMorseCode(this string myString)
+        public static string ToMorseCode(this string myString)
         {
             if (myString == null) return null;
             StringBuilder sb = new StringBuilder();
@@ -30,7 +30,7 @@ namespace StringExtension
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        private string TranslateCharToMorseCode(char c)
+        private static string TranslateCharToMorseCode(char c)
         {
         // http://en.wikipedia.org/wiki/Morse_code#Letters.2C_numbers.2C_punctuation
             if (c == 'a' || c == 'A') return "·–";
