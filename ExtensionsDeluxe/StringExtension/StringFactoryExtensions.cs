@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StringExtension
 {
-    public static class StingFactoryExtensions
+    public static class StringFactoryExtensions
     {
         public static string ToMorseCode(this string myString)
         {

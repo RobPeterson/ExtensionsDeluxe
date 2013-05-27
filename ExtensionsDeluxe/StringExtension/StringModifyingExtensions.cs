@@ -4,6 +4,9 @@
  *  StringFormatting
  *  Randomize
  *  Cryptographic Shuffle.
+ *  MD5
+ *  Sha1, Sha2 Checksum
+ *  RemoveMarkup
  *  Encrypt
  *  Reverse
  *  ToMorseCodeTones i.e make sounds.
@@ -56,6 +59,22 @@ namespace StringExtensions
         }
 
         /// <summary>
+        /// This will remove all characters that are not letters or digits. 
+        /// </summary>
+        /// <param name="myString"></param>
+        public static void RemoveAllNonAlphaOrNonDigit(this string myString)
+        {
+            if (myString == null) return;
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in myString)
+            {
+                if (Char.IsLetter(c) || Char.IsDigit(c))
+                    sb.Append(c);
+            }
+            myString = sb.ToString();
+        }
+
+        /// <summary>
         /// Remove any characters that are punctuation.
         /// </summary>
         /// <param name="myString"></param>
@@ -102,6 +121,21 @@ namespace StringExtensions
                 sb.Append(myString[index]);
                 myString.Remove(index, 1);
             }
+            myString = sb.ToString();
+        }
+
+        /// <summary>
+        /// This will reverse the order of the contents of the string.
+        /// </summary>
+        /// <param name="myString"></param>
+        public static void Reverse(this string myString)
+        {
+            if (myString == null) return;
+            StringBuilder sb = new StringBuilder();
+            int index = 0;
+            index = myString.Length - 1;
+            while (index > -1)
+                sb.Append(myString[index--]);
             myString = sb.ToString();
         }
 
