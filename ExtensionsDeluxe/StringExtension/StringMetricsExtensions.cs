@@ -256,5 +256,32 @@ namespace StringExtensions
 
         }
 
+        /// <summary>
+        /// This will return the number of times as substring occurs within a string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="subString"></param>
+        /// <returns></returns>
+        public static int SubstringFrequency(this string myString, string subString)
+        {
+            if (myString == null)
+                return 0;
+            if (String.IsNullOrEmpty(subString))
+                return 0;
+            if (subString.Length > myString.Length)
+                return 0;
+            int count = 0;
+            int indexOf = -1;
+            String copy = new String(myString.ToCharArray());
+            indexOf = copy.IndexOf(subString);
+            while (indexOf >= 0)
+            {
+                count++;
+                if (indexOf + 2 * subString.Length < copy.Length)
+                    copy = copy.Substring(indexOf + subString.Length, copy.Length - 1 - subString.Length);
+                indexOf = copy.IndexOf(subString);
+            }
+            return count;
+        }
     }
 }
