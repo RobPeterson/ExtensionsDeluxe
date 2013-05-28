@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringExtension
+namespace StringExtensions
 {
     public static class StringFactoryExtensions
     {

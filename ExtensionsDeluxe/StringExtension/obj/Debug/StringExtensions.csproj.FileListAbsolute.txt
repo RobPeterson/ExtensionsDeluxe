@@ -2,3 +2,8 @@ D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.d
 D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb
 D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
 D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JaroWinkler.cs" />
     <Compile Include="StringFactoryExtensions.cs" />
     <Compile Include="StringMetricsExtensions.cs" />
     <Compile Include="StringModifyingExtensions.cs" />
