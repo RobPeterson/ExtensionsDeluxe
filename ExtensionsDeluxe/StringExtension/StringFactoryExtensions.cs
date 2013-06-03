@@ -130,5 +130,25 @@ namespace StringExtensions
             return result;
         }
 
+        /// <summary>
+        /// This will return the substring between (inclusive) the startIndex and the endIndex.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="endIndex"></param>
+        /// <returns></returns>
+        public static string Middle(this string myString, int startIndex, int endIndex)
+        {
+            if (myString == null) return null;
+            string result = "";
+            int netLength = 0;
+            if (myString.Length == 0) return "";
+            if (myString.Length <= endIndex)
+                endIndex = myString.Length - 1;
+            netLength = startIndex - endIndex;
+            result = myString.Substring(startIndex, netLength);
+            return result;
+        }
+
     }
 }
