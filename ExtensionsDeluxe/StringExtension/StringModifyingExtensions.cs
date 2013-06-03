@@ -139,7 +139,33 @@ namespace StringExtensions
             myString = sb.ToString();
         }
 
+        /// <summary>
+        /// This will keep the left part of the string up to number of characters specified.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="numberOfCharacters"></param>
+        public static void KeepLeft(this string myString, int numberOfCharacters)
+        {
+            if (myString == null) return;
+            if (myString.Length <= numberOfCharacters)
+                return;
+            myString = myString.Substring(0, numberOfCharacters);
+        }
 
+        /// <summary>
+        /// This will the right part of the string up to the number of characters specified.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="numberOfCharacters"></param>
+        public static void KeepRight(this string myString, int numberOfCharacters)
+        {
+            if (myString == null) return;
+            if (myString.Length <= numberOfCharacters || myString.Length == 0)
+                return;
+            int startIndex = 0;
+            startIndex = myString.Length - numberOfCharacters - 1;
+            myString = myString.Substring(startIndex, numberOfCharacters);
+        }
 
     }
 }

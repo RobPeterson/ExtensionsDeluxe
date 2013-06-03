@@ -89,5 +89,46 @@ namespace StringExtensions
             if (c == '@') return "·––·–·";
             return "";
         }
+
+
+        /// <summary>
+        /// This will return the left part of the string up to the number of characters specified.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="numberOfCharacters"></param>
+        /// <returns></returns>
+        public static string Left(this string myString, int numberOfCharacters)
+        {
+            if (myString == null) return null;
+            string result = "";
+            if (numberOfCharacters >= myString.Length)
+            {
+                result = myString;
+                return result;
+            }
+            result = myString.Substring(0, numberOfCharacters);
+            return result;
+        }
+
+        /// <summary>
+        /// This will return the right part of the string up to the number of characters specified.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="numberOfCharacters"></param>
+        /// <returns></returns>
+        public static string Right(this string myString, int numberOfCharacters)
+        {
+            if (myString == null) return null;
+            string result = "";
+            int startIndex = 0;
+            if (myString.Length <= numberOfCharacters || myString.Length == 0)
+            {
+                return myString;
+            }
+            startIndex = myString.Length - numberOfCharacters - 1;
+            result = myString.Substring(startIndex, numberOfCharacters);
+            return result;
+        }
+
     }
 }
