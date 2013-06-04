@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsDeluxe", "Extensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringExtensions", "StringExtension\StringExtensions.csproj", "{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExtensions", "EnumExtensions\EnumExtensions.csproj", "{B01BB012-FC70-4280-A941-342939D195C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD50FD06-1505-4AE5-BC91-AAE11E6A18BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01BB012-FC70-4280-A941-342939D195C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01BB012-FC70-4280-A941-342939D195C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01BB012-FC70-4280-A941-342939D195C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01BB012-FC70-4280-A941-342939D195C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

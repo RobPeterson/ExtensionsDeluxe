@@ -1,0 +1,4 @@
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.dll
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.pdb
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.dll
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.pdb
