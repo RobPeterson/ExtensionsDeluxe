@@ -42,5 +42,17 @@ namespace StringExtensions
 
         // TODO:  Make a password strength method that take requirements as arguments.
 
+        /// <summary>
+        /// This will return true if two English spoken strings sound alike based on SoundEx Difference.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="target"></param>
+        /// <returns>Returns true if the SoundEx difference = 4.</returns>
+        public static bool IsHomophone(this string myString, string target)
+        {
+            if (myString == null || target == null) return false;
+
+            return (myString.SoundExDifference(target) == 4);
+        }
     }
 }
