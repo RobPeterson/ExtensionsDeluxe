@@ -150,5 +150,18 @@ namespace StringExtensions
             return result;
         }
 
+        /// <summary>
+        /// This will return the contents of the string as a byte array.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this string myString)
+        {
+            byte[] bytes = new byte[myString.Length * sizeof(char)];
+            System.Buffer.BlockCopy(myString.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
+
+
     }
 }
