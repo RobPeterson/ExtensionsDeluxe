@@ -54,5 +54,21 @@ namespace StringExtensions
 
             return (myString.SoundExDifference(target) == 4);
         }
+
+        
+        /// <summary>
+        /// This will return true if the string is a palindrome; false otherwise.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static bool IsPalindrome(this string myString)
+        {
+            if (myString == null) return false;
+            string reverse;
+            reverse = String.Copy(myString);
+            reverse.Reverse();
+            return (reverse == myString);
+        }
+
     }
 }

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JaroWinkler.cs" />
+    <Compile Include="StringCryptography.cs" />
     <Compile Include="StringFactoryExtensions.cs" />
     <Compile Include="StringMetricsExtensions.cs" />
     <Compile Include="StringModifyingExtensions.cs" />

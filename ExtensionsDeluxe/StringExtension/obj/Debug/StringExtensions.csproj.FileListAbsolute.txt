@@ -6,3 +6,4 @@ D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringEx
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb
+D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
