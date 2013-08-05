@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -160,6 +161,59 @@ namespace StringExtensions
             byte[] bytes = new byte[myString.Length * sizeof(char)];
             System.Buffer.BlockCopy(myString.ToCharArray(), 0, bytes, 0, bytes.Length);
             return bytes;
+        }
+
+        /// <summary>
+        /// Convert enum description to enum value.
+        /// </summary>
+        /// <typeparam name="T">T should be an Enum type</typeparam>
+        /// <param name="description">The name of an element in the enum.</param>
+        /// <returns>Type of T</returns>
+        public static T GetEnumValueFromDescription<T>(this string description)
+        {
+            var type = typeof(T);
+            if (!type.IsEnum) throw new InvalidOperationException();
+            foreach (var field in type.GetFields())
+            {
+                var attribute = Attribute.GetCustomAttribute(field,
+                    typeof(DescriptionAttribute)) as DescriptionAttribute;
+                if (attribute != null)
+                {
+                    if (attribute.Description == description)
+                        return (T)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == description)
+                        return (T)field.GetValue(null);
+                }
+            }
+            throw new ArgumentException("Not found.", "description");
+            // or return default(T);
+        }
+
+        /// <summary>
+        /// This will return true if the description value can be translated to an enum value of type T; 
+        /// Otherwise false will be returned.
+        /// </summary>
+        /// <typeparam name="T">T should be an enum</typeparam>
+        /// <param name="description"> The description is the name or description of an element in the enum.</param>
+        /// <param name="anEnumValue">The value that corresponds to the element in the enum.</param>
+        /// <returns>True if the description is successfully translated to a value or false if the value is defaulted.</returns>
+        public static bool TryGetEnumValueFromDescription<T>(this string description, out T anEnumValue)
+        {
+            bool result = true;
+            anEnumValue = default(T);
+
+            try
+            {
+                anEnumValue = GetEnumValueFromDescription<T>(description);
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+            return result;
         }
 
 
