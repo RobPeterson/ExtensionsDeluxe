@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringExtensions", "StringE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExtensions", "EnumExtensions\EnumExtensions.csproj", "{B01BB012-FC70-4280-A941-342939D195C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapExtensions", "BitmapExtensions\BitmapExtensions.csproj", "{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{B01BB012-FC70-4280-A941-342939D195C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B01BB012-FC70-4280-A941-342939D195C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B01BB012-FC70-4280-A941-342939D195C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

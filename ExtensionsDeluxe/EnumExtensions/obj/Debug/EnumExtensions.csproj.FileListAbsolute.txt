@@ -3,3 +3,7 @@ D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExten
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.dll
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.pdb
 D:\Personal\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.csprojResolveAssemblyReference.cache
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.pdb
