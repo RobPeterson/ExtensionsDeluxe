@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -216,6 +217,67 @@ namespace StringExtensions
             return result;
         }
 
+
+        // TODO:  Test the parsing methods and perhaps move to the validation project since this is not really a factory method.
+
+        /// <summary>
+        /// This will use reflection to parse a string into the type of T.  It will return true if it parsed; false otherwise.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="s"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
+        public static bool TryParse<T>(this string s, out T result)
+        {
+            result = default(T);
+            bool parsed = false;
+            try
+            {
+                MethodInfo m = typeof(T).GetMethod("Parse", new Type[] { typeof(string) });
+                if (m != null) { result = (T)m.Invoke(null, new object[] { s }); }
+                parsed = true;
+
+            }
+            catch (Exception)
+            {
+
+                parsed = false;
+            }
+
+            return parsed;
+        }
+
+
+        /// <summary>
+        /// This will return true if the string is null or empty and the type of T is nullable.
+        /// </summary>
+        /// <typeparam name="T">They type you are trying to parse to.</typeparam>
+        /// <param name="s"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
+        public static bool TryNullableParse<T> (this String s, out T result)
+        {
+            result = default(T);
+            bool parsed = false;
+            Type type = typeof (T);
+            try
+            {
+                if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof (Nullable))
+                {
+                    if (String.IsNullOrEmpty(s))
+                        return true;
+                }
+                parsed = s.TryParse<T>(out result);
+
+            }
+            catch (Exception)
+            {
+                parsed = false;
+            }
+
+            return parsed;
+
+        }
 
     }
 }
