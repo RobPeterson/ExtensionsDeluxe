@@ -1,0 +1,4 @@
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb

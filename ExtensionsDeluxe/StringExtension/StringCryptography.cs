@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
-namespace StringExtensions
+namespace StringExtension
 {
     public static class StringCryptography
     {
@@ -14,18 +14,18 @@ namespace StringExtensions
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
-        public static string GetMD5(this string myString)
+        public static string GetMd5(this string myString)
         {
             if (myString == null) return "";
-            MD5 md5hash = MD5.Create();
-            byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(myString));
+            var md5Hash = MD5.Create();
+            var data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(myString));
             // Create a new Stringbuilder to collect the bytes 
             // and create a string.
-            StringBuilder sBuilder = new StringBuilder();
-            md5hash.Dispose();
+            var sBuilder = new StringBuilder();
+            md5Hash.Dispose();
             // Loop through each byte of the hashed data  
             // and format each one as a hexadecimal string. 
-            for (int i = 0; i < data.Length; i++)
+            for (var i = 0; i < data.Length; i++)
             {
                 sBuilder.Append(data[i].ToString("x2"));
             }
@@ -39,12 +39,11 @@ namespace StringExtensions
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
-        public static byte[] GetSHA1(this string myString)
+        public static byte[] GetSha1(this string myString)
         {
-            byte[] data = myString.ToBytes();
-            byte[] result;
+            var data = myString.ToBytes();
             SHA1 sha = new SHA1CryptoServiceProvider();
-            result = sha.ComputeHash(data);
+            var result = sha.ComputeHash(data);
             sha.Dispose();
             return result;
         }
@@ -57,10 +56,9 @@ namespace StringExtensions
         /// <returns></returns>
         public static byte[] GetSHA2_512(this string myString)
         {
-            byte[] data = myString.ToBytes();
-            byte[] result;
+            var data = myString.ToBytes();
             SHA512 shaM = new SHA512Managed();
-            result = shaM.ComputeHash(data);
+            var result = shaM.ComputeHash(data);
             shaM.Dispose();
             return result;
         }

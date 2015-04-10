@@ -16,13 +16,11 @@
  */
 
 using System;
-using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace StringExtensions
+namespace StringExtension
 {
     public static class StringModifyingExtensions
     {
@@ -33,11 +31,10 @@ namespace StringExtensions
         public static void RemoveNonDigits(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (char c in myString.Where(c => Char.IsDigit(c)))
             {
-                if (Char.IsDigit(c))
-                    sb.Append(c);
+                sb.Append(c);
             }
             myString = sb.ToString();
         }
@@ -49,11 +46,10 @@ namespace StringExtensions
         public static void RemoveNonAlpha(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (var c in myString.Where(Char.IsLetter))
             {
-                if (Char.IsLetter(c))
-                    sb.Append(c);
+                sb.Append(c);
             }
             myString = sb.ToString();
         }
@@ -65,11 +61,10 @@ namespace StringExtensions
         public static void RemoveAllNonAlphaOrNonDigit(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (var c in myString.Where(c => Char.IsLetter(c) || Char.IsDigit(c)))
             {
-                if (Char.IsLetter(c) || Char.IsDigit(c))
-                    sb.Append(c);
+                sb.Append(c);
             }
             myString = sb.ToString();
         }
@@ -81,11 +76,10 @@ namespace StringExtensions
         public static void RemovePunctuation(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (char c in myString.Where(c => !Char.IsPunctuation(c)))
             {
-                if (!Char.IsPunctuation(c))
-                    sb.Append(c);
+                sb.Append(c);
             }
             myString = sb.ToString();
         }
@@ -97,11 +91,10 @@ namespace StringExtensions
         public static void RemoveWhiteSpace(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (var c in myString.Where(c => !Char.IsWhiteSpace(c)))
             {
-                if (!Char.IsWhiteSpace(c))
-                    sb.Append(c);
+                sb.Append(c);
             }
             myString = sb.ToString();
         }
@@ -113,11 +106,11 @@ namespace StringExtensions
         public static void Shuffle(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            Random randomizer = new Random();
+            var sb = new StringBuilder();
+            var randomizer = new Random();
             while (myString.Length > 0)
             {
-                int index = randomizer.Next(myString.Length);
+                var index = randomizer.Next(myString.Length);
                 sb.Append(myString[index]);
                 myString.Remove(index, 1);
             }
@@ -131,8 +124,8 @@ namespace StringExtensions
         public static void Reverse(this string myString)
         {
             if (myString == null) return;
-            StringBuilder sb = new StringBuilder();
-            int index = 0;
+            var sb = new StringBuilder();
+            var index = 0;
             index = myString.Length - 1;
             while (index > -1)
                 sb.Append(myString[index--]);
@@ -162,10 +155,49 @@ namespace StringExtensions
             if (myString == null) return;
             if (myString.Length <= numberOfCharacters || myString.Length == 0)
                 return;
-            int startIndex = 0;
+            var startIndex = 0;
             startIndex = myString.Length - numberOfCharacters - 1;
             myString = myString.Substring(startIndex, numberOfCharacters);
         }
 
+
+        /// <summary>
+        /// Rotate the string one character to the right.
+        /// </summary>
+        /// <param name="myString"></param>
+        public static void RotateRight(this string myString)
+        {
+            if (myString.Length < 2) return;
+            var last = myString.GetLastCharacterAsString();
+            myString = last + myString.Substring(0, myString.Length - 1);
+        }
+
+        /// <summary>
+        /// This will rotate the characters of a string about a pivot point.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="pivot">The length of characters from the left to pivot.</param>
+        public static void Rotate(this string myString, int pivot)
+        {
+            if (pivot > myString.Length) throw new ArgumentOutOfRangeException("pivot cannot be greater than the length of string");
+            if (pivot < 0) throw new ArgumentOutOfRangeException("pivot cannot be less than zero.");
+            if (pivot == myString.Length)
+                return;
+            var left = myString.Left(pivot);
+            var right = myString.Substring(pivot + 1, myString.Length);
+            myString = right + left;
+        }
+
+        /// <summary>
+        /// Rotate the string one character to the left.
+        /// </summary>
+        /// <param name="myString"></param>
+        public static void RotateLeft(this string myString)
+        {
+            if (myString.Length < 2) return;
+            var first = myString.GetFirstCharacterAsString();
+            myString = myString.Substring(2, myString.Length - 2);
+
+        }
     }
 }

@@ -1,28 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringExtensions
+namespace StringExtension
 {
     public static class StringFactoryExtensions
     {
         public static string ToMorseCode(this string myString)
         {
             if (myString == null) return null;
-            StringBuilder sb = new StringBuilder();
-            string morseChar;
-            foreach (char c in myString)
+            var sb = new StringBuilder();
+            foreach (var morseChar in myString.Select(TranslateCharToMorseCode).Where(morseChar => !String.IsNullOrEmpty(morseChar)))
             {
-                morseChar = TranslateCharToMorseCode(c);
-                if (!String.IsNullOrEmpty(morseChar))
-                {
-                    sb.Append(morseChar);
-                    sb.Append(" ");
-                }
+                sb.Append(morseChar);
+                sb.Append(" ");
             }
             return sb.ToString().TrimEnd();
         }
@@ -102,7 +98,7 @@ namespace StringExtensions
         public static string Left(this string myString, int numberOfCharacters)
         {
             if (myString == null) return null;
-            string result = "";
+            var result = "";
             if (numberOfCharacters >= myString.Length)
             {
                 result = myString;
@@ -121,8 +117,8 @@ namespace StringExtensions
         public static string Right(this string myString, int numberOfCharacters)
         {
             if (myString == null) return null;
-            string result = "";
-            int startIndex = 0;
+            var result = "";
+            var startIndex = 0;
             if (myString.Length <= numberOfCharacters || myString.Length == 0)
             {
                 return myString;
@@ -142,8 +138,8 @@ namespace StringExtensions
         public static string Middle(this string myString, int startIndex, int endIndex)
         {
             if (myString == null) return null;
-            string result = "";
-            int netLength = 0;
+            var result = "";
+            var netLength = 0;
             if (myString.Length == 0) return "";
             if (myString.Length <= endIndex)
                 endIndex = myString.Length - 1;
@@ -155,11 +151,11 @@ namespace StringExtensions
         /// <summary>
         /// This will return the contents of the string as a byte array.
         /// </summary>
-        /// <param name="str"></param>
+        /// <param name="myString"></param>
         /// <returns></returns>
         public static byte[] ToBytes(this string myString)
         {
-            byte[] bytes = new byte[myString.Length * sizeof(char)];
+            var bytes = new byte[myString.Length * sizeof(char)];
             System.Buffer.BlockCopy(myString.ToCharArray(), 0, bytes, 0, bytes.Length);
             return bytes;
         }
@@ -203,7 +199,7 @@ namespace StringExtensions
         /// <returns>True if the description is successfully translated to a value or false if the value is defaulted.</returns>
         public static bool TryGetEnumValueFromDescription<T>(this string description, out T anEnumValue)
         {
-            bool result = true;
+            var result = true;
             anEnumValue = default(T);
 
             try
@@ -230,10 +226,10 @@ namespace StringExtensions
         public static bool TryParse<T>(this string s, out T result)
         {
             result = default(T);
-            bool parsed = false;
+            var parsed = false;
             try
             {
-                MethodInfo m = typeof(T).GetMethod("Parse", new Type[] { typeof(string) });
+                var m = typeof(T).GetMethod("Parse", new Type[] { typeof(string) });
                 if (m != null) { result = (T)m.Invoke(null, new object[] { s }); }
                 parsed = true;
 
@@ -258,8 +254,8 @@ namespace StringExtensions
         public static bool TryNullableParse<T> (this String s, out T result)
         {
             result = default(T);
-            bool parsed = false;
-            Type type = typeof (T);
+            var parsed = false;
+            var type = typeof (T);
             try
             {
                 if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof (Nullable))
@@ -278,6 +274,90 @@ namespace StringExtensions
             return parsed;
 
         }
+
+
+        /// <summary>
+        /// This will return the last character of a string as a string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string GetLastCharacterAsString(this string myString)
+        {
+            if (myString.Length == 0) return "";
+            if (myString.Length == 1)
+                return myString;
+            else
+            {
+                var a = myString[myString.Length];
+                return a.ToString(CultureInfo.InvariantCulture);
+            }
+
+        }
+
+        /// <summary>
+        /// This will return the first character of a string as a string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string GetFirstCharacterAsString(this string myString)
+        {
+            if (myString.Length == 0) return "";
+            if (myString.Length == 1)
+                return myString;
+            else
+            {
+                return myString[0].ToString(CultureInfo.InvariantCulture);;
+            }
+        }
+
+        /// <summary>
+        /// This will remove the left most character of the string and return it like a pop of a queue.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string PopLeft(this string myString)
+        {
+            if (myString == null) return null;
+            if (myString == "") return "";
+            if (myString.Length == 1)
+            {
+                var result = myString;
+                myString = "";
+                return result;
+            }
+            else
+            {
+                var result = myString.GetFirstCharacterAsString();
+                myString = myString.Substring(1, myString.Length - 1);
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// This will remove the right most character of the string and return it like a pop of a queue.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string PopRight(this string myString)
+        {
+
+            if (myString == null) return null;
+            if (myString == "") return "";
+            if (myString.Length == 1)
+            {
+                var result = myString;
+                myString = "";
+                return result;
+            }
+            else
+            {
+                var result = myString.GetLastCharacterAsString();
+                myString = myString.Substring(0, myString.Length - 1);
+                return result;
+            }
+        
+        }
+
 
     }
 }

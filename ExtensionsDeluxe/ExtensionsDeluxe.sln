@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExtensions", "EnumExten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapExtensions", "BitmapExtensions\BitmapExtensions.csproj", "{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerExtensions", "IntegerExtensions\IntegerExtensions.csproj", "{CA912BF9-43BD-4EF3-A3ED-BEA95B6D46C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252D7D53-EF69-48AB-BF3B-901C3EF9E21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA912BF9-43BD-4EF3-A3ED-BEA95B6D46C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA912BF9-43BD-4EF3-A3ED-BEA95B6D46C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA912BF9-43BD-4EF3-A3ED-BEA95B6D46C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA912BF9-43BD-4EF3-A3ED-BEA95B6D46C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

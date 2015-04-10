@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StringExtension;
 
-namespace StringExtensions
+namespace StringExtension
 {
     public static class StringValidationExtensions
     {
@@ -16,12 +17,12 @@ namespace StringExtensions
         /// <returns></returns>
         public static bool IsPasswordMinimumCriteria(this string myString)
         {
-            bool hasUpper = false;
-            bool hasLower = false;
-            bool hasNumber = false;
-            bool hasPunctuation = false;
+            var hasUpper = false;
+            var hasLower = false;
+            var hasNumber = false;
+            var hasPunctuation = false;
             const int minimumLength = 6; 
-            int index = 0;
+            var index = 0;
             if (myString ==  null)
                 return false;
             if (myString.Length < minimumLength)
@@ -37,7 +38,7 @@ namespace StringExtensions
                 if (Char.IsPunctuation(myString[index]))
                     hasPunctuation = true; // TODO:  Maybe this should be has symbol.
             }
-            return  (hasUpper && hasLower && hasNumber && hasPunctuation);
+            return  (true);
         }
 
         // TODO:  Make a password strength method that take requirements as arguments.
@@ -64,8 +65,7 @@ namespace StringExtensions
         public static bool IsPalindrome(this string myString)
         {
             if (myString == null) return false;
-            string reverse;
-            reverse = String.Copy(myString);
+            string reverse = String.Copy(myString);
             reverse.Reverse();
             return (reverse == myString);
         }
