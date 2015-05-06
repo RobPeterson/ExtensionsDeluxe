@@ -268,5 +268,31 @@ namespace StringExtension
             }
             return count;
         }
+
+        /// <summary>
+        /// Counts the numbers of words in a string.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static int CountWords(this string s)
+        {
+        //http://www.dotnetperls.com/word-count
+            var c = 0;
+            for (var i = 1; i < s.Length; i++)
+            {
+                if (char.IsWhiteSpace(s[i - 1]) != true) continue;
+                if (char.IsLetterOrDigit(s[i]) == true ||
+                    char.IsPunctuation(s[i]))
+                {
+                    c++;
+                }
+            }
+            if (s.Length > 2)
+            {
+                c++;
+            }
+            return c;
+            
+        }
     }
 }

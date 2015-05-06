@@ -70,5 +70,20 @@ namespace StringExtension
             return (reverse == myString);
         }
 
+
+        /// <summary>
+        /// This will return true if the string is a word in the dictionary, false if it is not a word in the dictionary,
+        /// and null if it cannot be determined.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static bool? IsDictionaryWord(this string myString)
+        {
+            //TODO:  Try using a web service.
+            // One possiblility is http://services.aonaware.com/DictService/DictService.asmx?op=Match
+            bool? result = null;
+            return result;
+        }
+
     }
 }
