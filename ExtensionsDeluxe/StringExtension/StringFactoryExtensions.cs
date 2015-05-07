@@ -358,6 +358,29 @@ namespace StringExtension
         
         }
 
+        /// <summary>
+        /// Return all characters to the right of the first occurence of the search text.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="subString"></param>
+        /// <returns></returns>
+        public static string RightOfFirst(this string myString, string subString)
+        {
+            var startIndex = myString.IndexOf(subString, System.StringComparison.Ordinal);
+            return startIndex == 0 ? String.Empty : myString.Right(startIndex + subString.Length);
+        }
 
+
+        /// <summary>
+        /// Return all characters to the left of the first occurence of the 
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="subString"></param>
+        /// <returns></returns>
+        public static string LeftOfFirst(this string myString, string subString)
+        {
+            var startIndex = myString.IndexOf(subString, System.StringComparison.Ordinal);
+            return startIndex == 0 ? String.Empty : myString.Left(startIndex);
+        }
     }
 }
