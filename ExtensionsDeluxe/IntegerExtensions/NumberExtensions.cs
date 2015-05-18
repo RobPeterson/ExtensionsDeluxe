@@ -63,5 +63,27 @@ namespace IntegerExtensions
             return p % 2 == 0 ? Pow(Mul(a, a, mod), p / 2, mod) : Mul(Pow(a, p - 1, mod), a, mod);
         }
 
+        /// <summary>
+        /// This will return true if this is a perfect square; false otherwise
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool IsPerfectSquare(this ulong a )
+        {
+            var s = (ulong)Math.Sqrt(a);
+            return (s*s == a);
+        }
+
+        /// <summary>
+        /// This will return true if this is a Fibinoncci number.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool IsFibonacci(this ulong a)
+        {
+            return ((5*a*a + 4).IsPerfectSquare() || (5*a*a - 4).IsPerfectSquare());
+
+        }
+
     }
 }
