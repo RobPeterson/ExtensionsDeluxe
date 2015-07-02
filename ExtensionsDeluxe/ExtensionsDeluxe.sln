@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerExtensions", "Intege
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectExtensions", "ObjectExtensions\ObjectExtensions.csproj", "{D6F26027-9E8B-423C-8830-150A1FC5432C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{D49B918F-C5E9-448E-8060-B278FB2C1FBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{D6F26027-9E8B-423C-8830-150A1FC5432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F26027-9E8B-423C-8830-150A1FC5432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F26027-9E8B-423C-8830-150A1FC5432C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49B918F-C5E9-448E-8060-B278FB2C1FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49B918F-C5E9-448E-8060-B278FB2C1FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49B918F-C5E9-448E-8060-B278FB2C1FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49B918F-C5E9-448E-8060-B278FB2C1FBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

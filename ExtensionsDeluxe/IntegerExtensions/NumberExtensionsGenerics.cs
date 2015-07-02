@@ -15,56 +15,34 @@ namespace IntegerExtensions
     {
         public static bool IsPrime<T>(T value)
         {
-            //Saeed Amiri http://stackoverflow.com/questions/4236673/sample-code-for-fast-primality-testing-in-c-sharp
-            var n = UInt64.Parse(value.ToString());
-            ulong[] ar;
-            if ((ulong)n < 4759123141) ar = new ulong[] { 2, 7, 61 };
-            else if (n < 341550071728321) ar = new ulong[] { 2, 3, 5, 7, 11, 13, 17 };
-            else ar = new ulong[] { 2, 3, 5, 7, 11, 13, 17, 19, 23 };
-            ulong d = n - 1;
-            int s = 0;
-            while ((d & 1) == 0)
+            bool bIsPrime = true;
+            ulong number = 0;
+            if(!ulong.TryParse(value.ToString(), out number))
+            return false; // Negative numbers are not null.
+           
+            // Assume that the integer supplied is actually a prime, then test for
+            // statements that make this condition false
+            ulong lSquareRoot = (ulong)(Math.Sqrt(number));
+
+            for (ulong l = 2; l <= lSquareRoot; l++)
             {
-                d >>= 1;
-                s++;
-            }
-            int i, j;
-            for (i = 0; i < ar.Length; i++)
-            {
-                ulong a = Math.Min(n - 2, ar[i]);
-                ulong now = Pow(a, d, n);
-                if (now == 1) continue;
-                if (now == n - 1) continue;
-                for (j = 1; j < s; j++)
+                //  If the result of this calculation is greater than zero, then we will consider the integer to be prime
+                //  If we encounter one zero result in this loop, we will consider the integer to NOT be prime
+
+                bIsPrime = ((long)(number % l) > 0);
+
+                if (bIsPrime == false)
                 {
-                    now = Mul(now, now, n);
-                    if (now == n - 1) break;
+                    // Break out of the loop
+                    break;
                 }
-                if (j == s) return false;
             }
-            return true;
+
+            return bIsPrime; 
         }
 
-        private static ulong Mul(ulong a, ulong b, ulong mod)
-        {
-            int i;
-            ulong now = 0;
-            for (i = 63; i >= 0; i--) if (((a >> i) & 1) == 1) break;
-            for (; i >= 0; i--)
-            {
-                now <<= 1;
-                while (now > mod) now -= mod;
-                if (((a >> i) & 1) == 1) now += b;
-                while (now > mod) now -= mod;
-            }
-            return now;
-        }
 
-        private static ulong Pow(ulong a, ulong p, ulong mod)
-        {
-            if (p == 0) return 1;
-            return p % 2 == 0 ? Pow(Mul(a, a, mod), p / 2, mod) : Mul(Pow(a, p - 1, mod), a, mod);
-        }
+
 
         public static bool IsPerfectSquare<T>(T value)
         {
@@ -97,18 +75,23 @@ namespace IntegerExtensions
             return Math.Max(value1, value2);
         }
 
-        public static ulong LeastCommonMultiplier<T>(T[] values)
+        /// <summary>
+        /// This will return the least common multiple of two numbers.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value1"></param>
+        /// <param name="value2"></param>
+        /// <returns></returns>
+        public static ulong LeastCommonMultiple<T>(T value1, T value2)
         {
-            /* Jeff Reddy
-            * http://extensionmethod.net/csharp/int32/lcm
-            */
-            var retval = UInt64.Parse(values[0].ToString());
-            for (var i = 1; i < values.Length; i++)
-            {
-                retval = GreatestCommonDenominator((T)Convert.ChangeType(retval, typeof(T)), values[i]);
-            }
-            return retval;
+            var number1 = ulong.Parse(value1.ToString());
+            var number2 = ulong.Parse(value2.ToString());
+            
+            return (number1 / GreatestCommonDenominator<T>((T)Convert.ChangeType(number1,typeof(T)), (T)Convert.ChangeType(number2,typeof(T)))) * number2;
         }
+
+ 
+
 
         public static long[] ToArray<T>(T value)
         {
@@ -136,6 +119,12 @@ namespace IntegerExtensions
             return list.ToArray();
         }
 
+        /// <summary>
+        /// This returns the number of digits in number.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static int Length<T>(T value)
         {
             var number = Int64.Parse(value.ToString());

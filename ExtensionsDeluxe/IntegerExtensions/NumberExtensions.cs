@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace IntegerExtensions
 {
+
     public static class NumberExtensions
     {
 
+
+
         /// <summary>
         /// This will return true if an number is prime; false otherwise.
-        /// This implements the Miller Rabin algorithm for primality.
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
@@ -66,19 +68,27 @@ namespace IntegerExtensions
             return NumberExtensionsGenerics.GreatestCommonDenominator<ulong>(value1,value2);
         }
 
-
+        public static ulong GreatestCommonDenominator(this int value1, int value2)
+        {
+            return NumberExtensionsGenerics.GreatestCommonDenominator<int>(value1, value2);
+        }
 
 
         /// <summary>
-        /// Returns the least commong multiplier.
+        /// This will return the least common multiple of two numbers.
         /// </summary>
-        /// <param name="values"></param>
+        /// <param name="value1"></param>
+        /// <param name="value2"></param>
         /// <returns></returns>
-        public static ulong LeastCommonMultiplier(this ulong[] values)
+        public static ulong LeastCommonMultiple(this ulong value1, ulong value2)
         {
-            return NumberExtensionsGenerics.LeastCommonMultiplier(values);
+            return NumberExtensionsGenerics.LeastCommonMultiple<ulong>(value1,value2);
         }
 
+        public static ulong LeastCommonMultiple(this int value1, int value2)
+        {
+            return NumberExtensionsGenerics.LeastCommonMultiple<int>(value1, value2);
+        }
 
 
         /// <summary>
@@ -92,6 +102,15 @@ namespace IntegerExtensions
         }
 
 
+        /// <summary>
+        /// This returns an array of the digits in a number.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static long[] ToArray(this int number)
+        {
+            return NumberExtensionsGenerics.ToArray<long>(number);
+        }
 
         /// <summary>
         /// Get the length of a number, if were represented as a string.
@@ -101,6 +120,11 @@ namespace IntegerExtensions
         public static int Length(this long number)
         {
             return NumberExtensionsGenerics.Length<long>(number);
+        }
+
+        public static int Length(this int number)
+        {
+            return NumberExtensionsGenerics.Length<int>(number);
         }
 
 
@@ -115,11 +139,22 @@ namespace IntegerExtensions
             return NumberExtensionsGenerics.IsEven<long>(number);
         }
 
+        public static bool IsEven(this int number)
+        {
+            return NumberExtensionsGenerics.IsEven<int>(number);
+        }
 
 
         public static bool IsOdd(this long number)
         {
             return NumberExtensionsGenerics.IsOdd<long>(number);
         }
+
+        public static bool IsOdd(this int number)
+        {
+            return NumberExtensionsGenerics.IsOdd<int>(number);
+        }
+
+
     }
 }
