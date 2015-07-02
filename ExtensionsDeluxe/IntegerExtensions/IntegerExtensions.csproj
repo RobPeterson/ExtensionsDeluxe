@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="IntegerFactoryExtensions.cs" />
     <Compile Include="NumberExtensions.cs" />
+    <Compile Include="NumberExtensionsGenerics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
