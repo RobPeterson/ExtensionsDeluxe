@@ -2,3 +2,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bi
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin\Debug\BitmapExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin\Debug\BitmapExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin\Debug\BitmapExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.csprojResolveAssemblyReference.cache
+D:\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.pdb

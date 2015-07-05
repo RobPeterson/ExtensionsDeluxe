@@ -382,5 +382,36 @@ namespace StringExtension
             var startIndex = myString.IndexOf(subString, System.StringComparison.Ordinal);
             return startIndex == 0 ? String.Empty : myString.Left(startIndex);
         }
+
+        /// <summary>
+        /// Return all anagrams of a given string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static List<string> GetAnagrams(this string myString)
+        {
+            var result = new List<string>();
+            //TODO:  Get all permutations of a string a check them against the dictionary.
+            return result;
+        } 
+
+        /// <summary>
+        /// Return all dictionary words that match by the SoundEx algorithm.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static List<string> GetSoundExMatches(this string myString)
+        {
+            var result = new List<string>();
+            DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
+            var searchResults = client.Match(myString, "soundex");
+            if (searchResults.Length == 0) return result;
+            foreach (DictionaryService.DictionaryWord word in searchResults)
+            {
+                result.Add(word.Word);
+            }
+            return result;
+
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StringExtension;
 
+
 namespace StringExtension
 {
     public static class StringValidationExtensions
@@ -82,6 +83,15 @@ namespace StringExtension
             //TODO:  Try using a web service.
             // One possiblility is http://services.aonaware.com/DictService/DictService.asmx?op=Match
             bool? result = null;
+            // TODO: Handle web connectivity issues.
+            DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
+            DictionaryService.DictionaryWord[] words;
+            words = client.Match(myString,"exact");
+            if (words.Length > 0)
+                result = true;
+            else result = false;
+
+
             return result;
         }
 

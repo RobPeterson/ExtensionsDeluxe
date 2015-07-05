@@ -2,3 +2,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\b
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache

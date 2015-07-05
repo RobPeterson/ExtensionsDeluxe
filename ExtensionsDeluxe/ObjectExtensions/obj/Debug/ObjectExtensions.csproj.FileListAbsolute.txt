@@ -2,3 +2,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\bi
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\bin\Debug\ObjectExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\obj\Debug\ObjectExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\obj\Debug\ObjectExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\bin\Debug\ObjectExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\bin\Debug\ObjectExtensions.pdb
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\obj\Debug\ObjectExtensions.csprojResolveAssemblyReference.cache
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\obj\Debug\ObjectExtensions.dll
+D:\ExtensionsDeluxe\ExtensionsDeluxe\ObjectExtensions\obj\Debug\ObjectExtensions.pdb
