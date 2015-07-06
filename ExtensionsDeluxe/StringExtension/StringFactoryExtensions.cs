@@ -413,5 +413,51 @@ namespace StringExtension
             return result;
 
         }
+        /// <summary>
+        /// This will get a list of dictionary definitions for the given string if one exists.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static List<string> GetDefinitions(this string myString)
+        {
+            var result = new List<string>();
+            DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
+            var searchResults = client.Define(myString);
+            //TODO: Parse definitions.
+            return result;
+
+
+
+        }
+
+
+        /// <summary>
+        /// This will get all permutations of a string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static List<string> GetPermutations(this string myString)
+        {
+            // There should be n! permutations of a string where n is the number of elements (characters).
+            var output = new HashSet<string>(); // Use a hashset to prevent duplicates.
+            if (myString.Length == 1)
+            {
+                output.Add(myString);
+            }
+            else
+            {
+                foreach (var c in myString)
+                {
+                    // Remove one occurrence of the char (not all)
+                    var tail = myString.Remove(myString.IndexOf(c), 1);
+                    foreach (var tailPerms in tail.GetPermutations())
+                    {
+                        output.Add(c + tailPerms);
+                    }
+                }
+            }
+            return output.ToList<string>();
+        }
+
     }
 }

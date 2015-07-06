@@ -6,4 +6,3 @@ D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensio
 D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
 D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
 D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
-D:\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
