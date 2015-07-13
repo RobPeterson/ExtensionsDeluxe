@@ -20,7 +20,7 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static bool IsPrime(this int n)
         {
-            return NumberExtensionsGenerics.IsPrime<int>(n);
+            return NumberExtensionsGenerics.IsPrime(n);
         }
 
 
@@ -31,12 +31,12 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static bool IsPerfectSquare(this int a)
         {
-            return NumberExtensionsGenerics.IsPerfectSquare<int>(a);
+            return NumberExtensionsGenerics.IsPerfectSquare(a);
         }
 
         public static bool IsPerfectSquare(this ulong a)
         {
-            return NumberExtensionsGenerics.IsPerfectSquare<ulong>(a);
+            return NumberExtensionsGenerics.IsPerfectSquare(a);
         }
 
 
@@ -47,12 +47,12 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static bool IsFibonacci(this ulong a)
         {
-            return NumberExtensionsGenerics.IsFibonacci<ulong>(a);
+            return NumberExtensionsGenerics.IsFibonacci(a);
         }
 
         public static bool IsFibonacci(this int a)
         {
-            return NumberExtensionsGenerics.IsFibonacci<int>(a);
+            return NumberExtensionsGenerics.IsFibonacci(a);
         }
 
 
@@ -65,12 +65,12 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static ulong GreatestCommonDenominator(this ulong value1, ulong value2)
         {
-            return NumberExtensionsGenerics.GreatestCommonDenominator<ulong>(value1,value2);
+            return NumberExtensionsGenerics.GreatestCommonDenominator(value1,value2);
         }
 
         public static ulong GreatestCommonDenominator(this int value1, int value2)
         {
-            return NumberExtensionsGenerics.GreatestCommonDenominator<int>(value1, value2);
+            return NumberExtensionsGenerics.GreatestCommonDenominator(value1, value2);
         }
 
 
@@ -82,12 +82,12 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static ulong LeastCommonMultiple(this ulong value1, ulong value2)
         {
-            return NumberExtensionsGenerics.LeastCommonMultiple<ulong>(value1,value2);
+            return NumberExtensionsGenerics.LeastCommonMultiple(value1,value2);
         }
 
         public static ulong LeastCommonMultiple(this int value1, int value2)
         {
-            return NumberExtensionsGenerics.LeastCommonMultiple<int>(value1, value2);
+            return NumberExtensionsGenerics.LeastCommonMultiple(value1, value2);
         }
 
 
@@ -98,7 +98,7 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static long[] ToArray(this long number)
         {
-            return NumberExtensionsGenerics.ToArray<long>(number);
+            return NumberExtensionsGenerics.ToArray(number);
         }
 
 
@@ -119,12 +119,12 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static int Length(this long number)
         {
-            return NumberExtensionsGenerics.Length<long>(number);
+            return NumberExtensionsGenerics.Length(number);
         }
 
         public static int Length(this int number)
         {
-            return NumberExtensionsGenerics.Length<int>(number);
+            return NumberExtensionsGenerics.Length(number);
         }
 
 
@@ -136,25 +136,36 @@ namespace IntegerExtensions
         /// <returns></returns>
         public static bool IsEven(this long number)
         {
-            return NumberExtensionsGenerics.IsEven<long>(number);
+            return NumberExtensionsGenerics.IsEven(number);
         }
 
         public static bool IsEven(this int number)
         {
-            return NumberExtensionsGenerics.IsEven<int>(number);
+            return NumberExtensionsGenerics.IsEven(number);
         }
 
 
         public static bool IsOdd(this long number)
         {
-            return NumberExtensionsGenerics.IsOdd<long>(number);
+            return NumberExtensionsGenerics.IsOdd(number);
         }
 
         public static bool IsOdd(this int number)
         {
-            return NumberExtensionsGenerics.IsOdd<int>(number);
+            return NumberExtensionsGenerics.IsOdd(number);
         }
 
+        public static double GetFractionalPart(this double value)
+        {
 
+            return value - Math.Floor(value);
+
+        }
+
+        public static decimal GetFractionalPart(this decimal value)
+        {
+            return value - Math.Floor(value);
+
+        }
     }
 }
