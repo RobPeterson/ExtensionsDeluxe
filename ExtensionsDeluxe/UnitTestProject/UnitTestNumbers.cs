@@ -5,7 +5,7 @@ using IntegerExtensions;
 namespace UnitTestProject
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestNumbers
     {
         [TestMethod]
         public void TestIsPrime()
@@ -136,6 +136,44 @@ namespace UnitTestProject
             var result = test.IsEven();
             Assert.IsFalse(result);
         }
+
+        [TestMethod]
+        public void TestGetFractionalPart()
+        {
+            const double test = 11.2233;
+            int result = (int)(test.GetFractionalPart() * 10000); //There is a small amount of rounding error introduced by the method.
+            Assert.IsTrue(result == 2233);
+        }
+
+        [TestMethod]
+        public void TestGetIntegerPart()
+        {
+            const double test = 11.2233;
+            int result = (int) test.GetIntegerPart();
+            Assert.IsTrue(result == 11);
+        }
+
+        [TestMethod]
+        public void TestToRomanNumerals()
+        {
+            const int test = 13;
+            var result = test.ToRomanNumerals();
+            Assert.IsTrue(result == "XIII");
+        }
+
+        [TestMethod]
+        public void TestFactor()
+        {
+            const int test = 21;
+            var result = test.Factor();
+            Assert.IsTrue(result.Count == 4);
+            Assert.IsTrue(result.Contains(1));
+            Assert.IsTrue(result.Contains(3));
+            Assert.IsTrue(result.Contains(7));
+            Assert.IsTrue(result.Contains(21));
+        }
+
+
 
 
 

@@ -21,3 +21,9 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\St
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll.config
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtension.pdb

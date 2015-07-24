@@ -165,7 +165,16 @@ namespace IntegerExtensions
         public static decimal GetFractionalPart(this decimal value)
         {
             return value - Math.Floor(value);
+        }
 
+        public static double GetIntegerPart(this double value)
+        {
+            return (Math.Floor(value));
+        }
+
+        public static double GetIntegerPart(this decimal value)
+        {
+            return (Math.Floor((double)value));
         }
     }
 }
