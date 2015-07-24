@@ -229,7 +229,14 @@ namespace StringExtension
             var parsed = false;
             try
             {
-                var m = typeof(T).GetMethod("Parse", new Type[] { typeof(string) });
+                Type type;
+               
+                type = Nullable.GetUnderlyingType(typeof(T));
+                if(type == null)
+                {
+                    type = typeof(T);
+                }   
+                var m = type.GetMethod("Parse", new Type[] { typeof(string) });
                 if (m != null) { result = (T)m.Invoke(null, new object[] { s }); }
                 parsed = true;
 
@@ -247,7 +254,7 @@ namespace StringExtension
         /// <summary>
         /// This will return true if the string is null or empty and the type of T is nullable.
         /// </summary>
-        /// <typeparam name="T">They type you are trying to parse to.</typeparam>
+        /// <typeparam name="T">The type you are trying to parse to.</typeparam>
         /// <param name="s"></param>
         /// <param name="result"></param>
         /// <returns></returns>

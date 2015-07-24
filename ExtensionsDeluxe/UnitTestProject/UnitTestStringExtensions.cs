@@ -100,5 +100,33 @@ namespace UnitTestProject
             var result = test.Middle(1,2);
             Assert.IsNull(result);
         }
+
+        [TestMethod]
+        public void TestToBytes()
+        {
+            const string test = "test";
+            var result = test.ToBytes();
+            Assert.IsTrue(test.Count() == 4);
+        }
+
+        [TestMethod]
+        public void TestTryParse()
+        {
+            const string test = "125";
+            int val;
+            var result = test.TryParse<int>(out val);
+            Assert.IsTrue(result);
+            Assert.IsTrue(val == 125);
+        }
+
+        [TestMethod]
+        public void TestTryNullableParse()
+        {
+            const string test = "125";
+            int? val;
+            var result = test.TryNullableParse<int?>(out val);
+            Assert.IsTrue(result);
+            Assert.IsTrue(val == 125);
+        }
     }
 }
