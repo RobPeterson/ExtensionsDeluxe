@@ -128,5 +128,21 @@ namespace UnitTestProject
             Assert.IsTrue(result);
             Assert.IsTrue(val == 125);
         }
+
+        [TestMethod]
+        public void TestGetLastCharacterAsString()
+        {
+            const string test = "test";
+            var result = test.GetLastCharacterAsString();
+            Assert.IsTrue(result == "t");
+        }
+
+        [TestMethod]
+        public void TestGetFirstCharacterAsString()
+        {
+            const string test = "test";
+            var result = test.GetFirstCharacterAsString();
+            Assert.IsTrue(result == "t");
+        }
     }
 }

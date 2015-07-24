@@ -295,7 +295,7 @@ namespace StringExtension
                 return myString;
             else
             {
-                var a = myString[myString.Length];
+                var a = myString[myString.Length - 1];
                 return a.ToString(CultureInfo.InvariantCulture);
             }
 
