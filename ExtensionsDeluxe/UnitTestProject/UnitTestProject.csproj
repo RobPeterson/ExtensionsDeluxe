@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="UnitTestNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestStringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BitmapExtensions\BitmapExtensions.csproj">
