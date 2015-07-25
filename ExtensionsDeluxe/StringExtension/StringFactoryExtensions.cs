@@ -129,6 +129,52 @@ namespace StringExtension
         }
 
         /// <summary>
+        /// This will return the right part of a string to the right of the given index.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public static string RightOf(this string myString, int index)
+        {
+            if (myString == null) return null;
+            var result = "";
+            if (index == 0 || myString.Length == 0)
+            {
+                return myString;
+            }
+            if (index >= myString.Length - 1)
+            {
+                return result;
+            }
+     
+            result = myString.Substring(index + 1, myString.Length - index - 1);
+            return result;
+        }
+
+        /// <summary>
+        /// This will return the Left part of a string to the left of the given index.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public static string LeftOf(this string myString, int index)
+        {
+            if (myString == null) return null;
+            var result = "";
+            if (index >= myString.Length || myString.Length == 0)
+            {
+                return myString;
+            }
+            if (index >= myString.Length - 1)
+            {
+                return result;
+            }
+
+            result = myString.Substring(0, index);
+            return result;
+        }
+
+        /// <summary>
         /// This will return the substring between (inclusive) the startIndex and the endIndex.
         /// </summary>
         /// <param name="myString"></param>
@@ -317,53 +363,55 @@ namespace StringExtension
             }
         }
 
-        /// <summary>
-        /// This will remove the left most character of the string and return it like a pop of a queue.
-        /// </summary>
-        /// <param name="myString"></param>
-        /// <returns></returns>
-        public static string PopLeft(this string myString)
-        {
-            if (myString == null) return null;
-            if (myString == "") return "";
-            if (myString.Length == 1)
-            {
-                var result = myString;
-                myString = "";
-                return result;
-            }
-            else
-            {
-                var result = myString.GetFirstCharacterAsString();
-                myString = myString.Substring(1, myString.Length - 1);
-                return result;
-            }
-        }
+        ///// <summary>
+        ///// This will remove the left most character of the string and return it like a pop of a queue.
+        ///// </summary>
+        ///// <param name="myString"></param>
+        ///// <returns></returns>
+        //public static string PopLeft(this string myString)
+        //{
+            
+        //    if (myString == null) return null;
+        //    if (myString == "") return "";
+        //    if (myString.Length == 1)
+        //    {
+        //        var result = myString;
+        //        myString = "";
+        //        return result;
+        //    }
+        //    else
+        //    {
+                
+        //        var result = myString.GetFirstCharacterAsString();
+        //        myString = myString.Substring(1, myString.Length - 1);
+        //        return result;
+        //    }
+        //}
 
-        /// <summary>
-        /// This will remove the right most character of the string and return it like a pop of a queue.
-        /// </summary>
-        /// <param name="myString"></param>
-        /// <returns></returns>
-        public static string PopRight(this string myString)
-        {
+        ///// <summary>
+        ///// This will remove the right most character of the string and return it like a pop of a queue.
+        ///// </summary>
+        ///// <param name="myString"></param>
+        ///// <returns></returns>
+        //public static string PopRight(this string myString)
+        //{
 
-            if (myString == null) return null;
-            if (myString == "") return "";
-            if (myString.Length == 1)
-            {
-                var result = myString;
-                myString = "";
-                return result;
-            }
-            else
-            {
-                var result = myString.GetLastCharacterAsString();
-                myString = myString.Substring(0, myString.Length - 1);
-                return result;
-            }
+        //    if (myString == null) return null;
+        //    if (myString == "") return "";
+        //    if (myString.Length == 1)
+        //    {
+        //        var result = myString;
+        //        myString = "";
+        //        return result;
+        //    }
+        //    else
+        //    {
+        //        var result = myString.GetLastCharacterAsString();
+        //        myString = myString.Substring(0, myString.Length - 1);
+        //        return result;
+        //    }
         
-        }
+        //}
 
         /// <summary>
         /// Return all characters to the right of the first occurence of the search text.
@@ -374,7 +422,7 @@ namespace StringExtension
         public static string RightOfFirst(this string myString, string subString)
         {
             var startIndex = myString.IndexOf(subString, System.StringComparison.Ordinal);
-            return startIndex == 0 ? String.Empty : myString.Right(startIndex + subString.Length);
+            return startIndex == 0 ? String.Empty : myString.RightOf(startIndex + subString.Length -1);
         }
 
 

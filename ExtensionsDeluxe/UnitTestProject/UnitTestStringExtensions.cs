@@ -144,5 +144,88 @@ namespace UnitTestProject
             var result = test.GetFirstCharacterAsString();
             Assert.IsTrue(result == "t");
         }
+
+        [TestMethod]
+        public void TestRightOf()
+        {
+            const string test = "test";
+            var result = test.RightOf(1);
+            Assert.IsTrue(result == "st");
+        }
+
+        [TestMethod]
+        public void TestRightOfRightBoundary()
+        {
+            const string test = "test";
+            var result = test.RightOf(3);
+            Assert.IsTrue(result == "");
+        }
+
+        [TestMethod]
+        public void TestRightOfLeftBoundary()
+        {
+            const string test = "test";
+            var result = test.RightOf(0);
+            Assert.IsTrue(result == "test");
+        }
+
+        [TestMethod]
+        public void TestRightOfNull()
+        {
+            const string test = null;
+            var result = test.RightOf(3);
+            Assert.IsTrue(result == null);
+        }
+
+        [TestMethod]
+        public void TestRightOfFirst()
+        {
+            const string test = "test";
+            var result = test.RightOfFirst("s");
+            Assert.IsTrue(result == "t");
+        }
+
+        [TestMethod]
+        public void TestLeftOfFirst()
+        {
+            const string test = "test";
+            var result = test.LeftOfFirst("s");
+            Assert.IsTrue(result == "te");
+        }
+
+        [TestMethod]
+        public void TestLeftOf()
+        {
+            const string test = "test";
+            var result = test.LeftOf(2);
+            Assert.IsTrue(result == "te");
+        }
+
+        [TestMethod]
+        public void TestLeftOfRightBoundary()
+        {
+            const string test = "test";
+            var result = test.LeftOf(3);
+            Assert.IsTrue(result == "");
+        }
+
+        [TestMethod]
+        public void TestLeftOfLeftBoundary()
+        {
+            const string test = "test";
+            var result = test.LeftOf(0);
+            Assert.IsTrue(result == "");
+        }
+
+        [TestMethod]
+        public void TestLeftOfNull()
+        {
+            const string test = null;
+            var result = test.LeftOf(3);
+            Assert.IsTrue(result == null);
+        }
+
+
+
     }
 }
