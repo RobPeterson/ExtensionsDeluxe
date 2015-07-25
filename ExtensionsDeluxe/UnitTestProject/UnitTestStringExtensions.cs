@@ -273,5 +273,13 @@ namespace UnitTestProject
             Assert.IsFalse(result.Count > 0);
         }
 
+        [TestMethod]
+        public void TestGetSoundExMatchesPostive()
+        {
+            const string test = "log";
+            var result = test.GetSoundExMatches();
+            Assert.IsTrue(result.Count > 0);
+        }
+
     }
 }

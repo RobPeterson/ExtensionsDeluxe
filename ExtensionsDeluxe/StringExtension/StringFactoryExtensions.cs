@@ -471,12 +471,68 @@ namespace StringExtension
         public static List<string> GetSoundExMatches(this string myString)
         {
             var result = new List<string>();
-            DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
-            var searchResults = client.Match(myString, "soundex");
-            if (searchResults.Length == 0) return result;
-            foreach (DictionaryService.DictionaryWord word in searchResults)
+            string url = "http://services.aonaware.com/DictService/DictService.asmx";
+            string action = "http://services.aonaware.com/webservices/Match";
+
+
+            StringBuilder request = new StringBuilder();
+            request.AppendLine("<?xml version = \"1.0\" encoding = \"utf-8\" ?>");
+            request.AppendLine("<soap:Envelope xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd = \"http://www.w3.org/2001/XMLSchema\" xmlns:soap = \"http://schemas.xmlsoap.org/soap/envelope/\" >");
+            request.AppendLine("<soap:Body>");
+            request.AppendLine("<Match xmlns = \"http://services.aonaware.com/webservices/\" >");
+            request.AppendLine("<word>");
+            request.Append(myString);
+            request.Append("</word>");
+            request.AppendLine("<strategy>");
+            request.Append("soundex");
+            request.Append("</strategy>");
+            request.AppendLine("</Match>");
+            request.AppendLine("</soap:Body>");
+            request.AppendLine("</soap:Envelope>");
+            string x = request.ToString(); ;
+
+            XmlDocument soapEnvelop = new XmlDocument();
+            soapEnvelop.LoadXml(x);
+
+            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
+            webRequest.Headers.Add("SOAPAction", action);
+            webRequest.ContentType = "text/xml;charset=\"utf-8\"";
+            webRequest.Accept = "text/xml";
+            webRequest.Method = "POST";
+
+            using (Stream stream = webRequest.GetRequestStream())
             {
-                result.Add(word.Word);
+                soapEnvelop.Save(stream);
+            }
+
+
+            // Submit Request
+            IAsyncResult asyncResult = webRequest.BeginGetResponse(null, null);
+
+            // suspend this thread until call is complete. You might want to
+            // do something usefull here like update your UI.
+            asyncResult.AsyncWaitHandle.WaitOne();
+
+            // get the response from the completed web request.
+            string soapResult;
+            using (WebResponse webResponse = webRequest.EndGetResponse(asyncResult))
+            {
+                using (StreamReader rd = new StreamReader(webResponse.GetResponseStream()))
+                {
+                    soapResult = rd.ReadToEnd();
+                }
+
+            }
+
+            // parse the definitions into a list.
+            XmlDocument soapResultXML = new XmlDocument();
+            soapResultXML.LoadXml(soapResult);
+
+            var words = soapResultXML.GetElementsByTagName("DictionaryWord");
+
+            foreach (XmlNode word in words)
+            {
+                result.Add(word.InnerText);
             }
             return result;
 
