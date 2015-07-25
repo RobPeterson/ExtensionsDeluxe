@@ -257,6 +257,21 @@ namespace UnitTestProject
             Assert.IsFalse(result.Value);
         }
 
+        [TestMethod]
+        public void TestGetAnagramsPositive()
+        {
+            const string test = "act";
+            var result = test.GetAnagrams();
+            Assert.IsTrue(result.Count > 0);
+        }
+
+        [TestMethod]
+        public void TestGetAnagramsNegative()
+        {
+            const string test = "zzz";
+            var result = test.GetAnagrams();
+            Assert.IsFalse(result.Count > 0);
+        }
 
     }
 }

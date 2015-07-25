@@ -442,14 +442,24 @@ namespace StringExtension
         }
 
         /// <summary>
-        /// Return all anagrams of a given string.
+        /// Return all perfect anagrams of a given string.
+        /// This may include known Acronyms that appear in the dictionary.
+        /// This also only works for single words and does not generate phrases.
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
         public static List<string> GetAnagrams(this string myString)
         {
             var result = new List<string>();
-            //TODO:  Get all permutations of a string a check them against the dictionary.
+            var permutations = myString.GetPermutations();
+            foreach(var candidateWord in permutations)
+            {
+                var isWord = candidateWord.IsDictionaryWord();
+                if(isWord.HasValue && isWord.Value)
+                {
+                    result.Add(candidateWord);
+                }
+            }
             return result;
         } 
 
