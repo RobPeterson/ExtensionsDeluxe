@@ -25,3 +25,4 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.pdb
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csprojResolveAssemblyReference.cache

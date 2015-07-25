@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace StringExtension
 {
@@ -475,9 +478,75 @@ namespace StringExtension
         /// <returns></returns>
         public static List<string> GetDefinitions(this string myString)
         {
+            string url = "http://services.aonaware.com/DictService/DictService.asmx";
+            //string action = "http://services.aonaware.com/DictService/DictService.asmx?op=Define";
+            string action = "http://services.aonaware.com/webservices/Define";
             var result = new List<string>();
-            DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
-            var searchResults = client.Define(myString);
+            StringBuilder soapDefineRequest = new StringBuilder();
+            //soapDefineRequest.AppendLine("POST /DictService/DictService.asmx HTTP/1.1");
+            //soapDefineRequest.AppendLine("Host: services.aonaware.com");
+            //soapDefineRequest.AppendLine("Content - Type: text / xml; charset = utf - 8");
+            //soapDefineRequest.AppendLine("Content - Length: length");
+            //soapDefineRequest.AppendLine("SOAPAction: \"http://services.aonaware.com/webservices/Define\"");
+            soapDefineRequest.AppendLine("<?xml version = \"1.0\" encoding = \"utf-8\" ?>");
+            soapDefineRequest.AppendLine("<soap:Envelope xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd = \"http://www.w3.org/2001/XMLSchema\" xmlns:soap = \"http://schemas.xmlsoap.org/soap/envelope/\" >");
+            soapDefineRequest.AppendLine("<soap:Body>");
+            soapDefineRequest.AppendLine("<Define xmlns = \"http://services.aonaware.com/webservices/\" >");
+            soapDefineRequest.Append("<word>");
+            soapDefineRequest.Append(myString);
+            soapDefineRequest.Append("</word>");
+            soapDefineRequest.AppendLine("</Define>");
+            soapDefineRequest.AppendLine("</soap:Body>");
+            soapDefineRequest.AppendLine("</soap:Envelope>");
+            string x = soapDefineRequest.ToString(); ;
+      
+            XmlDocument soapEnvelop = new XmlDocument();
+            soapEnvelop.LoadXml(x);
+
+
+
+            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
+            webRequest.Headers.Add("SOAPAction", action);
+            webRequest.ContentType = "text/xml;charset=\"utf-8\"";
+            webRequest.Accept = "text/xml";
+            webRequest.Method = "POST";
+
+            using (Stream stream = webRequest.GetRequestStream())
+            {
+                soapEnvelop.Save(stream);
+            }
+
+
+            // Submit Request
+            IAsyncResult asyncResult = webRequest.BeginGetResponse(null, null);
+
+            // suspend this thread until call is complete. You might want to
+            // do something usefull here like update your UI.
+            asyncResult.AsyncWaitHandle.WaitOne();
+
+            // get the response from the completed web request.
+            string soapResult;
+            using (WebResponse webResponse = webRequest.EndGetResponse(asyncResult))
+            {
+                using (StreamReader rd = new StreamReader(webResponse.GetResponseStream()))
+                {
+                    soapResult = rd.ReadToEnd();
+                }
+                
+            }
+
+            // parse the definitions into a list.
+            XmlDocument soapResultXML = new XmlDocument();
+            soapResultXML.LoadXml(soapResult);
+
+            var definitions = soapResultXML.GetElementsByTagName("WordDefinition");
+            foreach(XmlNode definition in definitions)
+            {
+                result.Add(definition.InnerText);
+            }
+
+            //DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient ("DictServiceSoap", "http://services.aonaware.com/DictService/DictService.asmx");
+            //var searchResults = client.Define(myString);
             //TODO: Parse definitions.
             return result;
 

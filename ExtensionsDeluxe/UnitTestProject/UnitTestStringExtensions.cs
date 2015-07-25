@@ -225,6 +225,21 @@ namespace UnitTestProject
             Assert.IsTrue(result == null);
         }
 
+        [TestMethod]
+        public void TestGetPermutations()
+        {
+            const string test = "can";
+            var result = test.GetPermutations();
+            Assert.IsTrue(result.Count > 0);
+        }
+
+        [TestMethod]
+        public void TestGetDefinitions()
+        {
+            const string test = "can";
+            var result = test.GetDefinitions();
+            Assert.IsTrue(result.Count > 0);
+        }
 
 
     }
