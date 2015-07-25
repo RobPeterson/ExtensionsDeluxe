@@ -241,6 +241,22 @@ namespace UnitTestProject
             Assert.IsTrue(result.Count > 0);
         }
 
+        [TestMethod]
+        public void TestIsWordTrue()
+        {
+            const string test = "can";
+            var result = test.IsDictionaryWord();
+            Assert.IsTrue(result.Value);
+        }
+
+        [TestMethod]
+        public void TestIsWordFalse()
+        {
+            const string test = "xvx";
+            var result = test.IsDictionaryWord();
+            Assert.IsFalse(result.Value);
+        }
+
 
     }
 }
