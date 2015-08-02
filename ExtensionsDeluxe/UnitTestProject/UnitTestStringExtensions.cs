@@ -281,5 +281,155 @@ namespace UnitTestProject
             Assert.IsTrue(result.Count > 0);
         }
 
+        [TestMethod]
+        public void TestRemoveNonDigits()
+        {
+            string test = "test123";
+
+            var result = test.RemoveNonDigits();
+            Assert.IsTrue(result == "123");
+        }
+
+        [TestMethod]
+        public void TestRemoveNonAlpha()
+        {
+            string test = "test123";
+
+            var result = test.RemoveNonAlpha();
+            Assert.IsTrue(result == "test");
+        }
+
+        [TestMethod]
+        public void TestRemoveNonAlphaOrNonDigit()
+        {
+            string test = "$100,000 US";
+            var result = test.RemoveAllNonAlphaOrNonDigit();
+            Assert.IsTrue(result == "100000US");
+        }
+
+        [TestMethod]
+        public void TestRemovePunctuation()
+        {
+            string test = "St. Paul";
+            var result = test.RemovePunctuation();
+            Assert.IsTrue(result == "St Paul");
+
+        }
+
+        [TestMethod]
+        public void TestRemoveWhiteSpace()
+        {
+            string test = "Test This";
+            var result = test.RemoveWhiteSpace();
+            Assert.IsTrue(result == "TestThis");
+
+        }
+
+        [TestMethod]
+        public void TestShuffle()
+        {
+            string test = "Test This";
+            var result = test.Shuffle();
+            Assert.IsTrue(result != "Test This");
+            Assert.IsTrue(result.Length == test.Length);
+        }
+
+        [TestMethod]
+        public void TestReverse()
+        {
+            string test = "Test";
+            var result = test.Reverse();
+            Assert.IsTrue(result == "tseT");
+        }
+
+        [TestMethod]
+        public void TestKeepLeft1()
+        {
+            string test = "Test";
+            var result = test.KeepLeft(3);
+            Assert.IsTrue(result == "Tes");
+        }
+
+        [TestMethod]
+        public void TestKeepLeft2()
+        {
+            string test = "Test";
+            var result = test.KeepLeft(2);
+            Assert.IsTrue(result == "Te");
+        }
+
+        [TestMethod]
+        public void TestKeepLeft3()
+        {
+            string test = "Test";
+            var result = test.KeepLeft(0);
+            Assert.IsTrue(result == "");
+        }
+
+        [TestMethod]
+        public void TestKeepLeft4()
+        {
+            string test = "Test";
+            var result = test.KeepLeft(10);
+            Assert.IsTrue(result == "Test");
+        }
+
+        [TestMethod]
+        public void TestKeepRight1()
+        {
+            string test = "Test";
+            var result = test.KeepRight(3);
+            Assert.IsTrue(result == "est");
+        }
+
+        [TestMethod]
+        public void TestKeepRight2()
+        {
+            string test = "Test";
+            var result = test.KeepRight(2);
+            Assert.IsTrue(result == "st");
+        }
+
+        [TestMethod]
+        public void TestKeepRight3()
+        {
+            string test = "Test";
+            var result = test.KeepRight(0);
+            Assert.IsTrue(result == "");
+        }
+
+        [TestMethod]
+        public void TestKeepRight4()
+        {
+            string test = "Test";
+            var result = test.KeepRight(10);
+            Assert.IsTrue(result == "Test");
+        }
+
+        [TestMethod]
+        public void TestRotateRight1()
+        {
+            string test = "Test";
+            var result = test.RotateRight();
+            Assert.IsTrue(result == "tTes");
+        }
+
+        [TestMethod]
+        public void TestRotateLeft1()
+        {
+            string test = "Test";
+            var result = test.RotateLeft();
+            Assert.IsTrue(result == "estT");
+        }
+
+        [TestMethod]
+        public void TestRotate()
+        {
+            string test = "Test";
+            var result = test.Rotate(2);
+            Assert.IsTrue(result == "stTe");
+        }
+
+
     }
 }
