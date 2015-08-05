@@ -222,7 +222,7 @@ namespace StringExtension
                 if (soundex1.Substring(0, 1) == soundex2.Substring(0, 1))
                     result++;
             }
-            return (result == 0) ? 1 : result;
+            return result; // 8-5-2015 Rob:  Changed to allow 0 to be comparable to DIFFERENCE in SQLServer 2014.
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace StringExtension
         /// <param name="myString"></param>
         /// <param name="subString"></param>
         /// <returns></returns>
-        public static int SubstringFrequency(this string myString, string subString)
+        public static int CountSubstringOccurences(this string myString, string subString)
         {
             if (myString == null)
                 return 0;
@@ -256,15 +256,14 @@ namespace StringExtension
             if (subString.Length > myString.Length)
                 return 0;
             var count = 0;
-            var indexOf = -1;
-            var copy = new String(myString.ToCharArray());
-            indexOf = copy.IndexOf(subString, System.StringComparison.Ordinal);
-            while (indexOf >= 0)
+            if (subString != "")
             {
-                count++;
-                if (indexOf + 2 * subString.Length < copy.Length)
-                    copy = copy.Substring(indexOf + subString.Length, copy.Length - 1 - subString.Length);
-                indexOf = copy.IndexOf(subString, System.StringComparison.Ordinal);
+                int n = 0;
+                while ((n = myString.IndexOf(subString, n, StringComparison.InvariantCulture)) != -1)
+                {
+                    n += subString.Length;
+                    ++count;
+                }
             }
             return count;
         }

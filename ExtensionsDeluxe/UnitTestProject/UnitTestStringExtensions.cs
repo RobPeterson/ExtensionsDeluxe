@@ -430,6 +430,139 @@ namespace UnitTestProject
             Assert.IsTrue(result == "stTe");
         }
 
+        [TestMethod]
+        public void TestDamerauLevenshteinDistanceEqualTrue()
+        {
+            string test1 = "Test";
+            string test2 = "Test";
+            var result = test1.DamerauLevenshteinDistance(test2);
+            Assert.IsTrue(result == 0);
 
+        }
+
+        [TestMethod]
+        public void TestDamerauLevenshteinDistanceEqualFalse()
+        {
+            string test1 = "Test";
+            string test2 = "Test2";
+            var result = test1.DamerauLevenshteinDistance(test2);
+            Assert.IsTrue(result != 0);
+        }
+
+        [TestMethod]
+        public void TestLevenshteinDistanceEqualTrue()
+        {
+            string test1 = "Test";
+            string test2 = "Test";
+            var result = test1.LevenshteinDistance(test2);
+            Assert.IsTrue(result == 0);
+        }
+
+        [TestMethod]
+        public void TestLevenshteinDistanceEqualFalse()
+        {
+            string test1 = "Test";
+            string test2 = "Test2";
+            var result = test1.LevenshteinDistance(test2);
+            Assert.IsTrue(result != 0);
+        }
+
+        [TestMethod]
+        public void TestLevenshteinDistanceEqual2()
+        {
+            string test1 = "book";
+            string test2 = "back";
+            var result = test1.LevenshteinDistance(test2);
+            Assert.IsTrue(result == 2);
+        }
+
+
+        [TestMethod]
+        public void TestJaroWinklerEqual()
+        {
+            string test1 = "Test";
+            string test2 = "Test";
+            var result = test1.JaroWinkler(test2);
+            Assert.IsTrue(result == 1);
+        }
+
+        [TestMethod]
+        public void TestJaroWinklerNotEqual()
+        {
+            string test1 = "Teaa";
+            string test2 = "Test";
+            var result = test1.JaroWinkler(test2);
+            Assert.IsTrue(result < 1);
+        }
+
+        [TestMethod]
+        public void TestSoundExScore()
+        {
+            string test1 = "test";
+            var result = test1.SoundEx();
+            Assert.IsTrue(result == "T230");
+        }
+
+        [TestMethod]
+        public void TestSoundExDifference4()
+        {
+            string test1 = "book";
+            string test2 = "buck";
+            var result = test1.SoundExDifference(test2);
+            Assert.IsTrue(result == 4);
+        }
+
+        [TestMethod]
+        public void TestSoundExDifference3()
+        {
+            string test1 = "book";
+            string test2 = "break";
+            var result = test1.SoundExDifference(test2);
+            Assert.IsTrue(result == 3);
+        }
+
+        [TestMethod]
+        public void TestSoundExDifference2()
+        {
+            string test1 = "book";
+            string test2 = "breaker";
+            var result = test1.SoundExDifference(test2);
+            Assert.IsTrue(result == 2);
+        }
+
+        [TestMethod]
+        public void TestSoundExDifference1()
+        {
+            string test1 = "book";
+            string test2 = "lookers";
+            var result = test1.SoundExDifference(test2);
+            Assert.IsTrue(result == 1);
+        }
+
+        [TestMethod]
+        public void TestSoundExDifference0()
+        {
+            string test1 = "Animal";
+            string test2 = "lookers";
+            var result = test1.SoundExDifference(test2);
+            Assert.IsTrue(result == 0);
+        }
+
+        [TestMethod]
+        public void TestSubstringFrequency()
+        {
+            string test1 = "I am what I am.";
+            string test2 = "am";
+            var result = test1.CountSubstringOccurences(test2);
+            Assert.IsTrue(result == 2);
+        }
+
+        [TestMethod]
+        public void TestCountWords()
+        {
+            string test1 = "I am what I am.";
+            var result = test1.CountWords();
+            Assert.IsTrue(result == 5);
+        }
     }
 }

@@ -17,3 +17,8 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.csprojResolveAssemblyReference.cache
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.pdb
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin\Debug\BitmapExtensions.dll
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\bin\Debug\BitmapExtensions.pdb
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.csprojResolveAssemblyReference.cache
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.dll
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\BitmapExtensions\obj\Debug\BitmapExtensions.pdb
