@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoubleMetaphone.cs" />
     <Compile Include="JaroWinkler.cs" />
     <Compile Include="Service References\DictionaryService\Reference.cs">
       <AutoGen>True</AutoGen>

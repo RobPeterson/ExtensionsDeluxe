@@ -564,5 +564,46 @@ namespace UnitTestProject
             var result = test1.CountWords();
             Assert.IsTrue(result == 5);
         }
+
+        [TestMethod]
+        public void TestDoubleMetaphonePrimary()
+        {
+            var primaryKey = DoubleMetaphone.GetDoubleMetaphone("Smith").Primary;
+            Assert.IsTrue(primaryKey == "SM0");
+        }
+
+        [TestMethod]
+        public void TestDoubleMetaphoneSecondary()
+        {
+            var secondaryKey = DoubleMetaphone.GetDoubleMetaphone("Smith").Secondary;
+            Assert.IsTrue(secondaryKey == "XMT");
+        }
+
+        [TestMethod]
+        public void TestDoubleMetaphonePrimary2()
+        {
+            var test = "Smith";
+            var primaryKey = test.DoubleMetaphonePrimaryKey();
+            Assert.IsTrue(primaryKey == "SM0");
+
+        }
+
+        [TestMethod]
+        public void TestDoubleMetaphoneSecondary2()
+        {
+            var test = "Smith";
+            var secondaryKey = test.DoubleMetaphoneSecondaryKey();
+            Assert.IsTrue(secondaryKey == "XMT");
+        }
+
+
+        [TestMethod]
+        public void TestIsHomoPhone()
+        {
+            string test1 = "Carrots";
+            string test2 = "Karats";
+            var result = test1.IsHomophone(test2);
+            Assert.IsTrue(result);
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace StringExtension
         // TODO:  Make a password strength method that take requirements as arguments.
 
         /// <summary>
-        /// This will return true if two English spoken strings sound alike based on SoundEx Difference.
+        /// This will return true if two English spoken strings sound alike based on Double Metaphone primary key.
         /// </summary>
         /// <param name="myString"></param>
         /// <param name="target"></param>
@@ -56,7 +56,11 @@ namespace StringExtension
         {
             if (myString == null || target == null) return false;
 
-            return (myString.SoundExDifference(target) == 4);
+            //return (myString.SoundExDifference(target) == 4)
+            var primaryMetaphone1 = DoubleMetaphone.GetDoubleMetaphone(myString).Primary;
+            var primaryMetaphone2 = DoubleMetaphone.GetDoubleMetaphone(target).Primary;
+            return (primaryMetaphone1 == primaryMetaphone2);
+
         }
 
         
@@ -83,12 +87,6 @@ namespace StringExtension
         public static bool? IsDictionaryWord(this string myString)
         {
             // One possiblility is http://services.aonaware.com/DictService/DictService.asmx?op=Match
-            bool? result = null;
-            // TODO: Handle web connectivity issues.
-            //DictionaryService.DictServiceSoapClient client = new DictionaryService.DictServiceSoapClient();
-            //DictionaryService.DictionaryWord[] words;
-            //words = client.Match(myString,"exact");
-            //result = words.Length > 0;
 
             string url = "http://services.aonaware.com/DictService/DictService.asmx";
             string action = "http://services.aonaware.com/webservices/Match";

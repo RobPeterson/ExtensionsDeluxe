@@ -179,6 +179,32 @@ namespace StringExtension
             return result.ToString().ToUpper();
         }
 
+
+
+        /// <summary>
+        /// This will return the Double Metaphone Primary Key for a given string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string DoubleMetaphonePrimaryKey(this string myString)
+        {
+            if (myString == null)
+                return null;
+            return DoubleMetaphone.GetDoubleMetaphone(myString).Primary;
+        }
+        /// <summary>
+        /// This will return the Double Metaphone Secondary Key for a given string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static string DoubleMetaphoneSecondaryKey(this string myString)
+        {
+            if (myString == null)
+                return null;
+            return DoubleMetaphone.GetDoubleMetaphone(myString).Secondary;
+        }
+
+
         /// <summary>
         /// Returns the difference of two SoundEx phonetic scores.
         /// 4 is the closest match.  Smaller numbers are less of a match.
