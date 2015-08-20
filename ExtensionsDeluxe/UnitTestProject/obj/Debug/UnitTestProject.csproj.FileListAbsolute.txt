@@ -85,3 +85,5 @@ C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProjec
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.dll
+C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.pdb

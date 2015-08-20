@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestDateTimeExtensions.cs" />
     <Compile Include="UnitTestNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTestStringExtensions.cs" />
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\BitmapExtensions\BitmapExtensions.csproj">
       <Project>{252d7d53-ef69-48ab-bf3b-901c3ef9e21b}</Project>
       <Name>BitmapExtensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DateTimeExtensions\DateTimeExtensions.csproj">
+      <Project>{4E0ED2F4-3FAE-4266-8271-B036B7485C6A}</Project>
+      <Name>DateTimeExtensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\EnumExtensions\EnumExtensions.csproj">
       <Project>{b01bb012-fc70-4280-a941-342939d195c9}</Project>

@@ -41,7 +41,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestIsPerfectSquare()
         {
-            var test = 9 ;
+            const int test = 9;
             var result = test.IsPerfectSquare();
             Assert.IsTrue(result);
         }
@@ -81,8 +81,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestLeastCommonMultiple()
         {
-            int test = 4;
-            var result = test.LeastCommonMultiple(6);
+            var result = 4.LeastCommonMultiple(6);
             Assert.IsTrue(result == 12);
         }
 

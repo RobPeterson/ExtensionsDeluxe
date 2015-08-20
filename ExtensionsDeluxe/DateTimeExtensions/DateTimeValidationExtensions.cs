@@ -8,16 +8,6 @@ namespace DateTimeExtensions
 {
     public static class DateTimeValidationExtensions
     {
-        /// <summary>
-        /// Return true if date falls on a Sunday or a Saturday.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static bool IsWeekend(this DateTime value)
-        {
-            // http://www.extensionmethod.net/csharp/datetime/isweekend
-            return (value.DayOfWeek == DayOfWeek.Sunday || value.DayOfWeek == DayOfWeek.Saturday);
-        }
 
         /// <summary>
         /// Returns true if the given day of the week is a week day.
@@ -48,6 +38,16 @@ namespace DateTimeExtensions
             }
         }
 
+        public static bool IsWeekday(this DateTime d)
+        {
+            return d.DayOfWeek.IsWeekday();
+        }
+
+        public static bool IsWeekend(this DateTime d)
+        {
+            return d.DayOfWeek.IsWeekend();
+
+        }
         /// <summary>
         /// Returns true if it is the last day of the month; false otherwise.
         /// </summary>

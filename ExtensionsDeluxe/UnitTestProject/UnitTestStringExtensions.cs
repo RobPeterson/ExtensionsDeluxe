@@ -1,10 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringExtension;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringExtension;
 
 namespace UnitTestProject
 {
@@ -25,7 +22,7 @@ namespace UnitTestProject
         {
             const string test = "T";
             var result = test.ToMorseCode();
-            Assert.IsTrue(result.CompareTo("-") == 0);
+            Assert.IsTrue(String.Compare(result, "-", StringComparison.Ordinal) == 0);
         }
 
         [TestMethod]
@@ -33,7 +30,7 @@ namespace UnitTestProject
         {
             const string test = "E";
             var result = test.ToMorseCode();
-            Assert.IsTrue(result.CompareTo(".") == 0);
+            Assert.IsTrue(String.Compare(result, ".", StringComparison.Ordinal) == 0);
         }
 
         [TestMethod]
@@ -88,7 +85,7 @@ namespace UnitTestProject
         public void TestMiddle()
         {
             const string test = "test";
-            var result = test.Middle(1,2);
+            var result = test.Middle(1, 2);
             Assert.IsTrue(result.Equals("es"));
         }
 
@@ -97,7 +94,7 @@ namespace UnitTestProject
         public void TestMiddleNull()
         {
             string test = null;
-            var result = test.Middle(1,2);
+            var result = test.Middle(1, 2);
             Assert.IsNull(result);
         }
 
@@ -114,7 +111,7 @@ namespace UnitTestProject
         {
             const string test = "125";
             int val;
-            var result = test.TryParse<int>(out val);
+            var result = test.TryParse(out val);
             Assert.IsTrue(result);
             Assert.IsTrue(val == 125);
         }
@@ -124,7 +121,7 @@ namespace UnitTestProject
         {
             const string test = "125";
             int? val;
-            var result = test.TryNullableParse<int?>(out val);
+            var result = test.TryNullableParse(out val);
             Assert.IsTrue(result);
             Assert.IsTrue(val == 125);
         }
@@ -284,7 +281,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRemoveNonDigits()
         {
-            string test = "test123";
+            const string test = "test123";
 
             var result = test.RemoveNonDigits();
             Assert.IsTrue(result == "123");
@@ -293,7 +290,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRemoveNonAlpha()
         {
-            string test = "test123";
+            const string test = "test123";
 
             var result = test.RemoveNonAlpha();
             Assert.IsTrue(result == "test");
@@ -302,7 +299,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRemoveNonAlphaOrNonDigit()
         {
-            string test = "$100,000 US";
+            const string test = "$100,000 US";
             var result = test.RemoveAllNonAlphaOrNonDigit();
             Assert.IsTrue(result == "100000US");
         }
@@ -310,25 +307,23 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRemovePunctuation()
         {
-            string test = "St. Paul";
+            const string test = "St. Paul";
             var result = test.RemovePunctuation();
             Assert.IsTrue(result == "St Paul");
-
         }
 
         [TestMethod]
         public void TestRemoveWhiteSpace()
         {
-            string test = "Test This";
+            const string test = "Test This";
             var result = test.RemoveWhiteSpace();
             Assert.IsTrue(result == "TestThis");
-
         }
 
         [TestMethod]
         public void TestShuffle()
         {
-            string test = "Test This";
+            const string test = "Test This";
             var result = test.Shuffle();
             Assert.IsTrue(result != "Test This");
             Assert.IsTrue(result.Length == test.Length);
@@ -337,7 +332,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestReverse()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.Reverse();
             Assert.IsTrue(result == "tseT");
         }
@@ -345,7 +340,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepLeft1()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepLeft(3);
             Assert.IsTrue(result == "Tes");
         }
@@ -353,7 +348,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepLeft2()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepLeft(2);
             Assert.IsTrue(result == "Te");
         }
@@ -361,7 +356,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepLeft3()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepLeft(0);
             Assert.IsTrue(result == "");
         }
@@ -369,7 +364,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepLeft4()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepLeft(10);
             Assert.IsTrue(result == "Test");
         }
@@ -377,7 +372,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepRight1()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepRight(3);
             Assert.IsTrue(result == "est");
         }
@@ -385,7 +380,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepRight2()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepRight(2);
             Assert.IsTrue(result == "st");
         }
@@ -393,7 +388,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepRight3()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepRight(0);
             Assert.IsTrue(result == "");
         }
@@ -401,7 +396,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestKeepRight4()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.KeepRight(10);
             Assert.IsTrue(result == "Test");
         }
@@ -409,7 +404,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRotateRight1()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.RotateRight();
             Assert.IsTrue(result == "tTes");
         }
@@ -417,7 +412,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRotateLeft1()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.RotateLeft();
             Assert.IsTrue(result == "estT");
         }
@@ -425,7 +420,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestRotate()
         {
-            string test = "Test";
+            const string test = "Test";
             var result = test.Rotate(2);
             Assert.IsTrue(result == "stTe");
         }
@@ -433,18 +428,17 @@ namespace UnitTestProject
         [TestMethod]
         public void TestDamerauLevenshteinDistanceEqualTrue()
         {
-            string test1 = "Test";
-            string test2 = "Test";
+            const string test1 = "Test";
+            const string test2 = "Test";
             var result = test1.DamerauLevenshteinDistance(test2);
             Assert.IsTrue(result == 0);
-
         }
 
         [TestMethod]
         public void TestDamerauLevenshteinDistanceEqualFalse()
         {
-            string test1 = "Test";
-            string test2 = "Test2";
+            const string test1 = "Test";
+            const string test2 = "Test2";
             var result = test1.DamerauLevenshteinDistance(test2);
             Assert.IsTrue(result != 0);
         }
@@ -452,8 +446,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestLevenshteinDistanceEqualTrue()
         {
-            string test1 = "Test";
-            string test2 = "Test";
+            const string test1 = "Test";
+            const string test2 = "Test";
             var result = test1.LevenshteinDistance(test2);
             Assert.IsTrue(result == 0);
         }
@@ -461,8 +455,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestLevenshteinDistanceEqualFalse()
         {
-            string test1 = "Test";
-            string test2 = "Test2";
+            const string test1 = "Test";
+            const string test2 = "Test2";
             var result = test1.LevenshteinDistance(test2);
             Assert.IsTrue(result != 0);
         }
@@ -470,8 +464,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestLevenshteinDistanceEqual2()
         {
-            string test1 = "book";
-            string test2 = "back";
+            const string test1 = "book";
+            const string test2 = "back";
             var result = test1.LevenshteinDistance(test2);
             Assert.IsTrue(result == 2);
         }
@@ -480,8 +474,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestJaroWinklerEqual()
         {
-            string test1 = "Test";
-            string test2 = "Test";
+            const string test1 = "Test";
+            const string test2 = "Test";
             var result = test1.JaroWinkler(test2);
             Assert.IsTrue(result == 1);
         }
@@ -489,8 +483,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestJaroWinklerNotEqual()
         {
-            string test1 = "Teaa";
-            string test2 = "Test";
+            const string test1 = "Teaa";
+            const string test2 = "Test";
             var result = test1.JaroWinkler(test2);
             Assert.IsTrue(result < 1);
         }
@@ -498,7 +492,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExScore()
         {
-            string test1 = "test";
+            const string test1 = "test";
             var result = test1.SoundEx();
             Assert.IsTrue(result == "T230");
         }
@@ -506,8 +500,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExDifference4()
         {
-            string test1 = "book";
-            string test2 = "buck";
+            const string test1 = "book";
+            const string test2 = "buck";
             var result = test1.SoundExDifference(test2);
             Assert.IsTrue(result == 4);
         }
@@ -515,8 +509,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExDifference3()
         {
-            string test1 = "book";
-            string test2 = "break";
+            const string test1 = "book";
+            const string test2 = "break";
             var result = test1.SoundExDifference(test2);
             Assert.IsTrue(result == 3);
         }
@@ -524,8 +518,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExDifference2()
         {
-            string test1 = "book";
-            string test2 = "breaker";
+            const string test1 = "book";
+            const string test2 = "breaker";
             var result = test1.SoundExDifference(test2);
             Assert.IsTrue(result == 2);
         }
@@ -533,8 +527,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExDifference1()
         {
-            string test1 = "book";
-            string test2 = "lookers";
+            const string test1 = "book";
+            const string test2 = "lookers";
             var result = test1.SoundExDifference(test2);
             Assert.IsTrue(result == 1);
         }
@@ -542,8 +536,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSoundExDifference0()
         {
-            string test1 = "Animal";
-            string test2 = "lookers";
+            const string test1 = "Animal";
+            const string test2 = "lookers";
             var result = test1.SoundExDifference(test2);
             Assert.IsTrue(result == 0);
         }
@@ -551,8 +545,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestSubstringFrequency()
         {
-            string test1 = "I am what I am.";
-            string test2 = "am";
+            const string test1 = "I am what I am.";
+            const string test2 = "am";
             var result = test1.CountSubstringOccurences(test2);
             Assert.IsTrue(result == 2);
         }
@@ -560,7 +554,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestCountWords()
         {
-            string test1 = "I am what I am.";
+            const string test1 = "I am what I am.";
             var result = test1.CountWords();
             Assert.IsTrue(result == 5);
         }
@@ -568,30 +562,29 @@ namespace UnitTestProject
         [TestMethod]
         public void TestDoubleMetaphonePrimary()
         {
-            var primaryKey = DoubleMetaphone.GetDoubleMetaphone("Smith").Primary;
+            var primaryKey = "Smith".GetDoubleMetaphone().Primary;
             Assert.IsTrue(primaryKey == "SM0");
         }
 
         [TestMethod]
         public void TestDoubleMetaphoneSecondary()
         {
-            var secondaryKey = DoubleMetaphone.GetDoubleMetaphone("Smith").Secondary;
+            var secondaryKey = "Smith".GetDoubleMetaphone().Secondary;
             Assert.IsTrue(secondaryKey == "XMT");
         }
 
         [TestMethod]
         public void TestDoubleMetaphonePrimary2()
         {
-            var test = "Smith";
+            const string test = "Smith";
             var primaryKey = test.DoubleMetaphonePrimaryKey();
             Assert.IsTrue(primaryKey == "SM0");
-
         }
 
         [TestMethod]
         public void TestDoubleMetaphoneSecondary2()
         {
-            var test = "Smith";
+            const string test = "Smith";
             var secondaryKey = test.DoubleMetaphoneSecondaryKey();
             Assert.IsTrue(secondaryKey == "XMT");
         }
@@ -600,8 +593,8 @@ namespace UnitTestProject
         [TestMethod]
         public void TestIsHomoPhone()
         {
-            string test1 = "Carrots";
-            string test2 = "Karats";
+            const string test1 = "Carrots";
+            const string test2 = "Karats";
             var result = test1.IsHomophone(test2);
             Assert.IsTrue(result);
         }
