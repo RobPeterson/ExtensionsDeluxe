@@ -32,3 +32,9 @@ C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDelu
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.dll
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.dll.config
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csprojResolveAssemblyReference.cache
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb
