@@ -183,7 +183,37 @@ namespace StringExtension
             return sumOfDigits % 10 == 0;
         }
 
+        public static bool IsGivenName(this string myString)
+        {
+            return true;
+        }
+
+        public static bool IsGivenNameFemale(this string myString)
+        {
+            return true;
+        }
+
+        public static bool IsGivenNameMale(this string myString)
+        {
+            return true;
+        }
+
+        public static bool IsSurname(this string myString)
+        {
+            return true;
+        }
+
+        /* TODO:  Implement the first name last validation.  Try to do in memory. May need to create a series of small name collections as subsets of the whole
+       I would prefer to hit a web service to do this,
+        but so far have not found an existing one.
+        
+        Also, consider adding a grammar check. http://www.afterthedeadline.com/api.slp
+        
+        Also, consider adding a location name check.*/
     }
+
+
+
 
 
 }
