@@ -2,11 +2,6 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\Da
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.dll
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.dll
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
@@ -17,3 +12,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\Ex
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csprojResolveAssemblyReference.cache

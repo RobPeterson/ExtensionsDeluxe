@@ -44,6 +44,8 @@
     <Compile Include="DoubleMetaphone.cs" />
     <Compile Include="JaroWinkler.cs" />
     <Compile Include="ProperNameCollection.cs" />
+    <Compile Include="ProperNameCollectionAccessors.cs" />
+    <Compile Include="ProperNameCollectionFirstName.cs" />
     <Compile Include="Service References\DictionaryService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -183,9 +183,12 @@ namespace StringExtension
             return sumOfDigits % 10 == 0;
         }
 
+
+        /* If it is a known given name return true; false otherwise. */
         public static bool IsGivenName(this string myString)
         {
-            return true;
+            ProperNameCollection names = new ProperNameCollection();
+            return names.IsGivenName(myString);
         }
 
         public static bool IsGivenNameFemale(this string myString)
@@ -198,9 +201,11 @@ namespace StringExtension
             return true;
         }
 
+        /* If it is a known surname return ture; false otherwise.*/
         public static bool IsSurname(this string myString)
         {
-            return true;
+            ProperNameCollection names = new ProperNameCollection();
+            return names.IsSurname(myString);
         }
 
         /* TODO:  Implement the first name last validation.  Try to do in memory. May need to create a series of small name collections as subsets of the whole
@@ -209,7 +214,9 @@ namespace StringExtension
         
         Also, consider adding a grammar check. http://www.afterthedeadline.com/api.slp
         
-        Also, consider adding a location name check.*/
+        Also, consider adding a location name check.
+        
+        Also, consider a Google search to see if there are any hits.*/
     }
 
 

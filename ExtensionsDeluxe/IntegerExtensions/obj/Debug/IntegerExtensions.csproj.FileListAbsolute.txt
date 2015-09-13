@@ -11,11 +11,6 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\In
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
-C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
 C:\Users\rpeterson\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
@@ -26,3 +21,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\Ex
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
+C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache

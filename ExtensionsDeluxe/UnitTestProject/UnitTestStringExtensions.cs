@@ -598,5 +598,37 @@ namespace UnitTestProject
             var result = test1.IsHomophone(test2);
             Assert.IsTrue(result);
         }
+
+        [TestMethod]
+        public void TestIsGivenNameTrue()
+        {
+            const string test1 = "Robert";
+            var result = test1.IsGivenName();
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestIsGivenNameFalse()
+        {
+            const string test1 = "ZZZ";
+            var result = test1.IsGivenName();
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void TestIsSurnameTrue()
+        {
+            const string test1 = "Peterson";
+            var result = test1.IsSurname();
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestIsSurnameFalse()
+        {
+            const string test1 = "ZZZ";
+            var result = test1.IsSurname();
+            Assert.IsFalse(result);
+        }
     }
 }
