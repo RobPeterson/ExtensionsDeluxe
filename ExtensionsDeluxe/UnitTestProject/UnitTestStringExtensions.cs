@@ -630,5 +630,23 @@ namespace UnitTestProject
             var result = test1.IsSurname();
             Assert.IsFalse(result);
         }
+
+
+        [TestMethod]
+        public void TestGetCapialized()
+        {
+            const string test1 = "adam";
+            var result = test1.GetCapitalized();
+            Assert.IsTrue(result == "Adam");
+        }
+
+        [TestMethod]
+        public void TestGetNameAnagrams()
+        {
+            const string test1 = "Adam";
+            var result = test1.GetNameAnagrams();
+            Assert.IsTrue(result.Count > 0);
+        }
+
     }
 }
