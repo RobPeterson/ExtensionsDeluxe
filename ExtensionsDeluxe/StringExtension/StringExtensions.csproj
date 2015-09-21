@@ -101,6 +101,7 @@
     <Content Include="data\Census\1990CensusLastNames.txt" />
     <Content Include="data\Census\1990CensusFemaleFirstNames.txt" />
     <Content Include="data\Census\1990CensusMaleFirstNames.txt" />
+    <Content Include="data\EnableWordList\Enable.txt" />
     <Content Include="data\SocialSecurity\FirstNames\yob1880.txt" />
     <Content Include="data\SocialSecurity\FirstNames\yob1881.txt" />
     <Content Include="data\SocialSecurity\FirstNames\yob1882.txt" />
