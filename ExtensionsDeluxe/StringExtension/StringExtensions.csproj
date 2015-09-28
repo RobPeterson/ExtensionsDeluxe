@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dictionary\IDictionaryCollection.cs" />
+    <Compile Include="Dictionary\EnableDictionary.cs" />
     <Compile Include="DoubleMetaphone.cs" />
     <Compile Include="JaroWinkler.cs" />
     <Compile Include="ProperNameCollection.cs" />
