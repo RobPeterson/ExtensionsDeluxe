@@ -675,16 +675,47 @@ namespace StringExtension
         /// <returns></returns>
         public static string GetCapitalized(this string myString)
         {
-            string result = myString;
-            if (String.IsNullOrEmpty(myString))
+            var result = myString;
+            if (string.IsNullOrEmpty(myString))
                 return "";
             var first = myString.GetFirstCharacterAsString();
-            if (!Char.IsLetter(first[0])) return result;
+            if (!char.IsLetter(first[0])) return result;
             first = first.ToUpper();
             result = first + myString.Substring(1, myString.Length - 1);
             return result;
 
         }
+
+        /// <summary>
+        /// Get the number of unique substrings in a string.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <returns></returns>
+        public static List<string> GetDistinctSubstrings(this string myString)
+        {
+
+            var all = new HashSet<string>();
+            var last = new HashSet<StringBuilder>();
+
+            foreach (var t in myString)
+            {
+                foreach (var sb in last)
+                {
+                    sb.Append(t);
+                    if (!all.Contains(sb.ToString()))
+                    {
+                        all.Add(sb.ToString());
+                    }
+                }
+                if (!all.Contains(t + ""))
+                {
+                    all.Add(myString + "");
+                }
+                last.Add(new StringBuilder(t + ""));
+            }
+            return all.ToList();
+        }
+    
 
     }
 }

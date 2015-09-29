@@ -14,7 +14,6 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj
 D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
 D:\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll.config
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll.config
-C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\obj\Debug\StringExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll.config
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\StringExtension\bin\Debug\StringExtension.pdb

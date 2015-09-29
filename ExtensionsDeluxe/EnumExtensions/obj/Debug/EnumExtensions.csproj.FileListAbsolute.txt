@@ -11,7 +11,6 @@ D:\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.dll
 D:\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.pdb
 D:\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.dll
 D:\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.pdb
-C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.csprojResolveAssemblyReference.cache

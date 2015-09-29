@@ -17,3 +17,7 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\b
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csprojResolveAssemblyReference.cache
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb

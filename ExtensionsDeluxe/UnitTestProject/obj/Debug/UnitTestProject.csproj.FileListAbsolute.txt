@@ -109,3 +109,6 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.pdb
