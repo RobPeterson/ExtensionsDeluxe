@@ -648,5 +648,37 @@ namespace UnitTestProject
             Assert.IsTrue(result.Count > 0);
         }
 
+        [TestMethod]
+        public void TestHasPrefixPositive()
+        {
+            const string test1 = "super";
+            var result = test1.HasPrefix("sup");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestHasPrefixNegative()
+        {
+            const string test1 = "super";
+            var result = test1.HasPrefix("pu");
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void TestHasSuffixPositive()
+        {
+            const string test1 = "super";
+            var result = test1.HasSuffix("per");
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestHasSuffixNegative()
+        {
+            const string test1 = "super";
+            var result = test1.HasSuffix("rup");
+            Assert.IsFalse(result);
+        }
+
     }
 }

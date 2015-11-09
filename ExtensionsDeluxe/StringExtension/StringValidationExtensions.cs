@@ -183,6 +183,35 @@ namespace StringExtension
             return sumOfDigits % 10 == 0;
         }
 
+        /// <summary>
+        /// This will return true if my string and prefix is not null and myString begins with the given prefix;
+        /// otherwise false is returned.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="prefix"></param>
+        /// <returns></returns>
+        public static bool HasPrefix(this string myString, string prefix)
+        {
+            if (myString == null) return false;
+            if (prefix == null) return false;
+            if (myString.Length < prefix.Length) return false;
+            return (myString.Left(prefix.Length) == prefix);
+        }
+
+        /// <summary>
+        /// This will return true if my string and prefix si not null and myString ends with the given suffix;
+        /// otherise false is returned.
+        /// </summary>
+        /// <param name="myString"></param>
+        /// <param name="suffix"></param>
+        /// <returns></returns>
+        public static bool HasSuffix(this string myString, string suffix)
+        {
+            if (myString == null) return false;
+            if (suffix == null) return false;
+            if (myString.Length < suffix.Length) return false;
+            return (myString.Right(suffix.Length) == suffix);
+        }
 
         /* If it is a known given name return true; false otherwise. */
         public static bool IsGivenName(this string myString)

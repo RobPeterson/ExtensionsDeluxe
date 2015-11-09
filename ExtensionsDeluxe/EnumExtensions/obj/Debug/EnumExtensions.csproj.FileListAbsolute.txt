@@ -24,3 +24,4 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\D
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\bin\Debug\EnumExtensions.pdb
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\EnumExtensions\obj\Debug\EnumExtensions.csprojResolveAssemblyReference.cache
