@@ -547,9 +547,19 @@ namespace UnitTestProject
         {
             const string test1 = "I am what I am.";
             const string test2 = "am";
-            var result = test1.CountSubstringOccurences(test2);
+            var result = test1.Occurences(test2);
             Assert.IsTrue(result == 2);
         }
+
+        [TestMethod]
+        public void TestSubstringFrequencyChar()
+        {
+            const string test1 = "I am what I am.";
+            const char test2 = 'a';
+            var result = test1.Occurrences(test2);
+            Assert.IsTrue(result == 3);
+        }
+
 
         [TestMethod]
         public void TestCountWords()

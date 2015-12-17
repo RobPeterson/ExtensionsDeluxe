@@ -273,7 +273,7 @@ namespace StringExtension
         /// <param name="myString"></param>
         /// <param name="subString"></param>
         /// <returns></returns>
-        public static int CountSubstringOccurences(this string myString, string subString)
+        public static int Occurences(this string myString, string subString)
         {
             if (myString == null)
                 return 0;
@@ -293,6 +293,13 @@ namespace StringExtension
             }
             return count;
         }
+
+        /// <summary> Returns the number of occurences of a single character within a string. </summary>
+        public static int Occurrences(this System.String input, char value)
+        {
+            return input.Count(c => c == value);
+        }
+
 
         /// <summary>
         /// Counts the numbers of words in a string.
