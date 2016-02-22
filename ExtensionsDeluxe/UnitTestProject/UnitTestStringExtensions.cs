@@ -690,5 +690,21 @@ namespace UnitTestProject
             Assert.IsFalse(result);
         }
 
+        [TestMethod]
+        public void TestIsAddressTrue()
+        {
+            const string test1 = "14435 Penrod Detroit MI 48223";
+            var result = test1.IsAddress();
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TestIsAddressFalse()
+        {
+            const string test1 = "14435 Penrod Detroit MI 48843";
+            var result = test1.IsAddress();
+            Assert.IsFalse(result);
+        }
+
     }
 }

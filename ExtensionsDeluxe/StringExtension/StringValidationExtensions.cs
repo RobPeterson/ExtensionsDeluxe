@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using StringExtension;
 using System.Xml;
 using System.Net;
 using System.IO;
+using System.Net.Http;
 
 namespace StringExtension
 {
@@ -18,6 +20,10 @@ namespace StringExtension
         /// </summary>
         /// <param name="myString"></param>
         /// <returns></returns>
+        /// 
+        
+
+       
         public static bool IsPasswordMinimumCriteria(this string myString)
         {
             var hasUpper = false;
@@ -246,6 +252,63 @@ namespace StringExtension
         Also, consider adding a location name check.
         
         Also, consider a Google search to see if there are any hits.*/
+
+        public static bool IsAddress(this string myString)
+        {
+            /* So, try a google hack.
+            Search for an address and if a map appears it found an address.
+            in the returned html look for an image with the id=lu_map.
+            the alt tag on the image has "Map of " and then the address that matched up. 
+            https://www.google.com/#safe=off&q=14435+Penrod+Detroit+MI+48223
+            */
+            var queryString = "/search?sclient=psy-ab&site=&source=hp&q=" + GetQueryStringFormat(myString);
+            var url = "https://www.google.com" + queryString;
+            //var queryString = "q=" + GetQueryStringFormat(myString);
+            //var url = "https://maps.google.com/maps?" + queryString;
+            //Task taskCheckGoogle = new Task(()=>StringValidationExtensions.Checkaddress(url));
+            //taskCheckGoogle.Start();
+
+            Task<string> result = Checkaddress(url);
+            var content = result.Result;
+            //return content.Contains("lu_map");
+            var pattern = "ll=-?\\d+(\\.\\d+)?";
+            /* if it is real address, there will be a lattitude and longitude number
+            in the query string to google maps, if not there will not be a longitude or a latitude*/ 
+            return System.Text.RegularExpressions.Regex.IsMatch(content, pattern);
+        }
+
+        async static Task<string> Checkaddress(string url)
+        {
+
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(url);
+            string result = await response.Content.ReadAsStringAsync();
+
+            return result;
+        }
+
+        private static string GetQueryStringFormat(string aString)
+        {
+            var sb = new StringBuilder();
+            var lastAdded = '*';
+            aString = aString.Trim();
+            foreach (var a in aString)
+            {
+
+                if (char.IsLetterOrDigit(a))
+                {
+                    sb.Append(a);
+                    lastAdded = a;
+                }
+                else
+                {
+                    if (lastAdded == '+') continue;
+                    sb.Append('+');
+                    lastAdded = '+';
+                }
+            }
+            return sb.ToString();
+        }
     }
 
 
