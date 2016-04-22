@@ -309,7 +309,42 @@ namespace StringExtension
             }
             return sb.ToString();
         }
+
+
+
+        /// <summary>
+        /// This will query the internet for given phone number.
+        /// </summary>
+        public static bool IsPhoneNumber(this string myString)
+        {
+            //http://www.phonevalidator.com/
+
+            Task<string> result = CheckPhoneNumber(myString);
+            string response = result.Result;
+            
+       
+            return response.Length > 0;
+
+        }
+
+        async static Task<string> CheckPhoneNumber(string phoneNumber)
+        {
+            using (var client = new HttpClient())
+            {
+                var values = new Dictionary<string, string>
+                    {
+                       { "txtPhone",  phoneNumber}
+
+                    };
+
+                var content = new FormUrlEncodedContent(values);
+                var response = await client.PostAsync("http://www.phonevalidator.com/results.aspx", content);
+                var responseString = await response.Content.ReadAsStringAsync();
+                return responseString;
+            }
+        }
     }
+
 
 
 

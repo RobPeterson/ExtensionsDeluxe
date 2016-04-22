@@ -200,6 +200,18 @@ namespace StringExtension
             return right + left;
         }
 
-
+        /// <summary>
+        /// This remove will remove a sub string and replace it with a new substring.
+        /// </summary>
+        /// <param name="input">Current string.</param>
+        /// <param name="start">First index of the substring to remove.</param>
+        /// <param name="length">The number of characters the substring to remove.</param>
+        /// <param name="replaceWith">The new substring.</param>
+        /// <returns></returns>
+        public static string Stuff(this string input, int start, int length, string replaceWith)
+        {
+            // Trying to mimic the stuff function that is available in MS SQL Server.
+            return input.Remove(start, length).Insert(start, replaceWith);
+        }
     }
 }
