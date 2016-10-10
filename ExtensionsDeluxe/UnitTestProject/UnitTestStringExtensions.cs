@@ -715,6 +715,13 @@ namespace UnitTestProject
         }
 
         [TestMethod]
+        public void TestIsPhoneNumberFalse()
+        {
+            const string test1 = "123-456-7888";
+            var result = test1.IsPhoneNumber();
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
         public void TestStuff()
         {
             string test1 = "abcde";

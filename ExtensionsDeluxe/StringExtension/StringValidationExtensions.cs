@@ -327,7 +327,7 @@ namespace StringExtension
 
         }
 
-        async static Task<string> CheckPhoneNumber(string phoneNumber)
+        static async Task<string> CheckPhoneNumber(string phoneNumber)
         {
             using (var client = new HttpClient())
             {
@@ -338,8 +338,14 @@ namespace StringExtension
                     };
 
                 var content = new FormUrlEncodedContent(values);
+                CookieContainer cookies = new CookieContainer();
+                Uri uri = new Uri("http://www.phonevalidator.com/results.aspx");
+                IEnumerable<Cookie> responseCookies = cookies.GetCookies(uri).Cast<Cookie>();
                 var response = await client.PostAsync("http://www.phonevalidator.com/results.aspx", content);
                 var responseString = await response.Content.ReadAsStringAsync();
+               
+                response = await client.GetAsync("http://www.phonevalidator.com/results.aspx");
+                responseString = await response.Content.ReadAsStringAsync();
                 return responseString;
             }
         }
