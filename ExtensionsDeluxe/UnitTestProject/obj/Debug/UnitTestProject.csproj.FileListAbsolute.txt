@@ -112,3 +112,5 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\obj\
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\DateTimeExtensions.pdb
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\CollectionsExtensions.dll
+C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\UnitTestProject\bin\Debug\CollectionsExtensions.pdb
