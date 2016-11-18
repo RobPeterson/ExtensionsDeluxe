@@ -106,9 +106,10 @@ namespace CollectionsExtensions
                 throw new ArgumentException("The sequence is empty.");
 
             //optimization for ICollection<T>
-            if (sequence is ICollection<T>)
+            var collection = sequence as ICollection<T>;
+            if (collection != null)
             {
-                var col = (ICollection<T>) sequence;
+                var col = collection;
                 return col.ElementAt(random.Next(col.Count));
             }
 
@@ -122,22 +123,7 @@ namespace CollectionsExtensions
             return selected;
         }
 
-        /// <summary>
-        ///     This will reverse the order of a list.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="items"></param>
-        /// <returns></returns>
-        public static IEnumerable<T> Reverse<T>(this IEnumerable<T> items)
-        {
-            var list = (IList<T>) items;
 
-            if (list == null)
-                yield return default(T);
-
-            for (var i = list.Count - 1; i >= 0; i--)
-                yield return list[i];
-        }
 
         /// <summary>
         ///     Async create of a System.Collections.Generic.List
@@ -163,11 +149,12 @@ namespace CollectionsExtensions
         }
 
         /// <summary>
-        ///     This will return a comma separated string for the given collection.
+        ///     This will return a comma separated string for the given collection with unique values.
+        ///     Each unique value will only be included in the string once.
         /// </summary>
         /// <param name="list"></param>
         /// <param name="getValuesFunc">Function to select the calculate the string.</param>
-        /// <param name="maxLength">Default to -1, If set greater than zero, it will limit the lenght to that many spaces.</param>
+        /// <param name="maxLength">Default to -1, If set greater than zero, it will limit the length to that many spaces.</param>
         /// <returns></returns>
         public static string ToUniqueCommaSeparatedString<T>(this IList<T> list, Func<T, string> getValuesFunc,
             int maxLength = -1)
@@ -182,6 +169,33 @@ namespace CollectionsExtensions
                 if (valueSet.Contains(value)) // Don't do duplicates.
                     continue;
                 valueSet.Add(value);
+                valueSb.Append(value);
+                valueSb.Append(",");
+            }
+            var valueStr = valueSb.ToString();
+            if (valueStr.Length > 0) // pop off the last comma
+                valueStr = valueStr.Substring(0, valueStr.Length - 1);
+            if ((valueStr.Length > maxLength) && (maxLength >= 0))
+                valueStr = valueStr.Substring(0, maxLength);
+            return valueStr;
+        }
+
+        /// <summary>
+        ///     This will return a comma separated string for the given collection.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="getValuesFunc">Function to select the calculate the string.</param>
+        /// <param name="maxLength">Default to -1, If set greater than zero, it will limit the length to that many spaces.</param>
+        /// <returns></returns>
+        public static string ToCommaSeparatedString<T>(this IList<T> list, Func<T, string> getValuesFunc,
+            int maxLength = -1)
+        {
+            if (maxLength == 0)
+                throw new Exception("You can't pass zero to this function.  What would be the point?");
+            var valueSb = new StringBuilder();
+            foreach (var a in list)
+            {
+                var value = getValuesFunc(a);
                 valueSb.Append(value);
                 valueSb.Append(",");
             }
