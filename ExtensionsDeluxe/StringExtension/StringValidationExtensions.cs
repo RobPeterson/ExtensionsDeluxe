@@ -92,71 +92,10 @@ namespace StringExtension
         /// <returns></returns>
         public static bool? IsDictionaryWord(this string myString)
         {
-            // One possiblility is http://services.aonaware.com/DictService/DictService.asmx?op=Match
-
-            string url = "http://services.aonaware.com/DictService/DictService.asmx";
-            string action = "http://services.aonaware.com/webservices/Match";
-
-
-            StringBuilder request = new StringBuilder();
-            request.AppendLine("<?xml version = \"1.0\" encoding = \"utf-8\" ?>");
-            request.AppendLine("<soap:Envelope xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd = \"http://www.w3.org/2001/XMLSchema\" xmlns:soap = \"http://schemas.xmlsoap.org/soap/envelope/\" >");
-            request.AppendLine("<soap:Body>");
-            request.AppendLine("<Match xmlns = \"http://services.aonaware.com/webservices/\" >");
-            request.AppendLine("<word>");
-            request.Append(myString);
-            request.Append("</word>");
-            request.AppendLine("<strategy>");
-            request.Append("exact");
-            request.Append("</strategy>");
-            request.AppendLine("</Match>");
-            request.AppendLine("</soap:Body>");
-            request.AppendLine("</soap:Envelope>");
-            string x = request.ToString(); ;
-
-            XmlDocument soapEnvelop = new XmlDocument();
-            soapEnvelop.LoadXml(x);
-
-            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(url);
-            webRequest.Headers.Add("SOAPAction", action);
-            webRequest.ContentType = "text/xml;charset=\"utf-8\"";
-            webRequest.Accept = "text/xml";
-            webRequest.Method = "POST";
-
-            using (Stream stream = webRequest.GetRequestStream())
-            {
-                soapEnvelop.Save(stream);
-            }
-
-
-            // Submit Request
-            IAsyncResult asyncResult = webRequest.BeginGetResponse(null, null);
-
-            // suspend this thread until call is complete. You might want to
-            // do something usefull here like update your UI.
-            asyncResult.AsyncWaitHandle.WaitOne();
-
-            // get the response from the completed web request.
-            string soapResult;
-            using (WebResponse webResponse = webRequest.EndGetResponse(asyncResult))
-            {
-                using (StreamReader rd = new StreamReader(webResponse.GetResponseStream()))
-                {
-                    soapResult = rd.ReadToEnd();
-                }
-
-            }
-
-            // parse the definitions into a list.
-            XmlDocument soapResultXML = new XmlDocument();
-            soapResultXML.LoadXml(soapResult);
-
-            var words = soapResultXML.GetElementsByTagName("DictionaryWord");
-
+            var words = myString.GetDefinitions();
             if (words.Count > 0)
                 return true;
-            else return false;
-           
+            else return false;  
         }
 
         /// <summary>
@@ -310,45 +249,6 @@ namespace StringExtension
             return sb.ToString();
         }
 
-
-
-        /// <summary>
-        /// This will query the internet for given phone number.
-        /// </summary>
-        public static bool IsPhoneNumber(this string myString)
-        {
-            //http://www.phonevalidator.com/
-
-            Task<string> result = CheckPhoneNumber(myString);
-            string response = result.Result;
-            
-       
-            return response.Length > 0;
-
-        }
-
-        static async Task<string> CheckPhoneNumber(string phoneNumber)
-        {
-            using (var client = new HttpClient())
-            {
-                var values = new Dictionary<string, string>
-                    {
-                       { "txtPhone",  phoneNumber}
-
-                    };
-
-                var content = new FormUrlEncodedContent(values);
-                CookieContainer cookies = new CookieContainer();
-                Uri uri = new Uri("http://www.phonevalidator.com/results.aspx");
-                IEnumerable<Cookie> responseCookies = cookies.GetCookies(uri).Cast<Cookie>();
-                var response = await client.PostAsync("http://www.phonevalidator.com/results.aspx", content);
-                var responseString = await response.Content.ReadAsStringAsync();
-               
-                response = await client.GetAsync("http://www.phonevalidator.com/results.aspx");
-                responseString = await response.Content.ReadAsStringAsync();
-                return responseString;
-            }
-        }
     }
 
 

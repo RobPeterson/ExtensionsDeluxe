@@ -26,3 +26,8 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bi
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csprojResolveAssemblyReference.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\bin\Debug\IntegerExtensions.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.csproj.CoreCompileInputs.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\IntegerExtensions\obj\Debug\IntegerExtensions.pdb

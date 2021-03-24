@@ -22,3 +22,8 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csprojResolveAssemblyReference.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\bin\Debug\DateTimeExtensions.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.csproj.CoreCompileInputs.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\DateTimeExtensions\obj\Debug\DateTimeExtensions.pdb

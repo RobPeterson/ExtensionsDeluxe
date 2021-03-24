@@ -38,3 +38,9 @@ C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb
 C:\Users\Rob\Source\Repos\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csprojResolveAssemblyReference.cache
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csprojResolveAssemblyReference.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.dll.config
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\bin\Debug\ExtensionsDeluxe.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.csproj.CoreCompileInputs.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\ExtensionsDeluxe\obj\Debug\ExtensionsDeluxe.pdb

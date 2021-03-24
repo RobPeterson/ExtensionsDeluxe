@@ -3,3 +3,9 @@ C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensio
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\bin\Debug\CollectionsExtensions.pdb
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.dll
 C:\Users\rpeterson\Desktop\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\bin\Debug\CollectionsExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\bin\Debug\CollectionsExtensions.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.csproj.CoreCompileInputs.cache
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.dll
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.pdb
+C:\Users\rpeterso277\Documents\GitHub\ExtensionsDeluxe\ExtensionsDeluxe\CollectionsExtensions\obj\Debug\CollectionsExtensions.csprojAssemblyReference.cache

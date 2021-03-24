@@ -56,7 +56,7 @@ namespace UnitTestProject
             var orderChanged = false;
             for(var i = 0; i < test.Count(); i++)
             {
-                if (test[i] != r[i]) continue;
+                if (test[i] == r[i]) continue;
                 orderChanged = true;
                 break;
             }

@@ -271,14 +271,6 @@ namespace UnitTestProject
         }
 
         [TestMethod]
-        public void TestGetSoundExMatchesPostive()
-        {
-            const string test = "log";
-            var result = test.GetSoundExMatches();
-            Assert.IsTrue(result.Count > 0);
-        }
-
-        [TestMethod]
         public void TestRemoveNonDigits()
         {
             const string test = "test123";
@@ -706,21 +698,6 @@ namespace UnitTestProject
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void TestIsPhoneNumberTrue()
-        {
-            const string test1 = "517-304-9305";
-            var result = test1.IsPhoneNumber();
-            Assert.IsTrue(result);
-        }
-
-        [TestMethod]
-        public void TestIsPhoneNumberFalse()
-        {
-            const string test1 = "123-456-7888";
-            var result = test1.IsPhoneNumber();
-            Assert.IsFalse(result);
-        }
         [TestMethod]
         public void TestStuff()
         {
